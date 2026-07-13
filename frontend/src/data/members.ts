@@ -403,7 +403,7 @@ export const members: Member[] = [
   {
     id: "31",
     name: "Ms. Nidhi Misalankar",
-    photo: "/members/Gurdas.jpg",
+    photo: "/members/nidhi.jpg",
     imagePosition: "center 150%",
     designation: "Research Scientist",
     qualification: "MPT",
