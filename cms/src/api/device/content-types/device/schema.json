@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devices",
+  "info": {
+    "singularName": "device",
+    "pluralName": "devices",
+    "displayName": "Device",
+    "description": "Rehabilitation devices at CCSRR"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "name" },
+    "description": { "type": "richtext", "required": true },
+    "image": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "specifications": { "type": "richtext" },
+    "status": { "type": "enumeration", "enum": ["Operational", "In Development", "Planned"], "default": "Operational" },
+    "location": { "type": "string" },
+    "contactPerson": { "type": "string" }
+  }
+}

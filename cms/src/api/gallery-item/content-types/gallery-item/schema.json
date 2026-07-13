@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "gallery_items",
+  "info": {
+    "singularName": "gallery-item",
+    "pluralName": "gallery-items",
+    "displayName": "Gallery Item",
+    "description": "Gallery images for CCSRR"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "images": { "type": "media", "multiple": true, "required": true, "allowedTypes": ["images"] },
+    "category": { "type": "enumeration", "enum": ["Events", "Devices", "Lab", "Workshops", "Visits", "Outreach"], "required": true },
+    "description": { "type": "text" },
+    "videoEmbed": { "type": "string" }
+  }
+}

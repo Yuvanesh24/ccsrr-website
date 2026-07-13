@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_contents",
+  "info": {
+    "singularName": "page-content",
+    "pluralName": "page-contents",
+    "displayName": "Page Content",
+    "description": "Dynamic page content (Vision, Mission, Objectives, etc.)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "section": { "type": "string", "required": true, "unique": true },
+    "title": { "type": "string" },
+    "content": { "type": "richtext" },
+    "contentList": { "type": "json" }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "publications",
+  "info": {
+    "singularName": "publication",
+    "pluralName": "publications",
+    "displayName": "Publication",
+    "description": "Research publications from CCSRR"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title" },
+    "authors": { "type": "text", "required": true },
+    "journal": { "type": "string" },
+    "year": { "type": "integer", "required": true },
+    "publicationType": { "type": "enumeration", "enum": ["Journal", "Conference", "Book Chapter"], "default": "Journal" },
+    "category": { "type": "enumeration", "enum": ["Article", "Review", "Conference", "Editorial"], "default": "Article" },
+    "doi": { "type": "string" },
+    "link": { "type": "string" },
+    "abstract": { "type": "richtext" }
+  }
+}

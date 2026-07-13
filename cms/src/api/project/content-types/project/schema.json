@@ -1,0 +1,91 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": "Research projects at CCSRR"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "projectType": {
+      "type": "enumeration",
+      "enum": [
+        "Funded",
+        "PhD",
+        "Student"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "Ongoing",
+        "Completed",
+        "Upcoming"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "fundingAgency": {
+      "type": "string"
+    },
+    "pi": {
+      "type": "string"
+    },
+    "coPi": {
+      "type": "text"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "string"
+    },
+    "studentName": {
+      "type": "string"
+    },
+    "thesisTitle": {
+      "type": "string"
+    },
+    "guide": {
+      "type": "string"
+    },
+    "registrationYear": {
+      "type": "string"
+    },
+    "studentCategory": {
+      "type": "enumeration",
+      "enum": [
+        "UG",
+        "PG"
+      ]
+    },
+    "studentNames": {
+      "type": "text"
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "coGuide": {
+      "type": "text"
+    }
+  }
+}

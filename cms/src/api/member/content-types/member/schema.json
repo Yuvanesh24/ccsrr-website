@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "members",
+  "info": {
+    "singularName": "member",
+    "pluralName": "members",
+    "displayName": "Member",
+    "description": "Team members of CCSRR"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "name" },
+    "photo": { "type": "media", "multiple": false, "required": false, "allowedTypes": ["images"] },
+    "imagePosition": { "type": "string" },
+    "designation": { "type": "string" },
+    "qualification": { "type": "string" },
+    "department": { "type": "string" },
+    "category": { "type": "enumeration", "enum": ["Coordinator", "Faculty", "Research Scholar", "PhD Scholar", "Clinical Collaborator", "Staff"], "required": true },
+    "group": { "type": "enumeration", "enum": ["team", "former", "collaborator"], "default": "team" },
+    "bio": { "type": "richtext" },
+    "email": { "type": "email" },
+    "linkedin": { "type": "string" },
+    "order": { "type": "integer", "default": 0 }
+  }
+}
