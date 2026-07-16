@@ -8,8 +8,8 @@ module.exports = [
         useDefaults: true,
         directives: {
           'connect-src': ["'self'", 'https:'],
-          'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'localhost:1337'],
-          'media-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'localhost:1337'],
+          'img-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'localhost:1337', 'https:'],
+          'media-src': ["'self'", 'data:', 'blob:', 'market-assets.strapi.io', 'localhost:1337', 'https:'],
           upgradeInsecureRequests: null,
         },
       },
@@ -18,7 +18,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://localhost:3000', 'http://127.0.0.1:3000'],
+      origin: ['http://localhost:3000', 'http://127.0.0.1:3000', 'https://ccsrr-website.vercel.app'],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
