@@ -30,7 +30,7 @@ export default async function MembersPage() {
   const faculties = teamMembers
     .filter((m) => {
       const sid = m.staticId ? Number(m.staticId) : NaN;
-      if (isNaN(sid)) return false;
+      if (isNaN(sid)) return m.category === "Faculty";
       return sid >= 2 && sid <= 18;
     })
     .sort((a, b) => {
@@ -57,7 +57,7 @@ export default async function MembersPage() {
     });
   const scholarsResearchers = teamMembers.filter((m) => {
     const sid = m.staticId ? Number(m.staticId) : NaN;
-    if (isNaN(sid)) return true;
+    if (isNaN(sid)) return m.category !== "Faculty";
     return sid >= 19;
   });
   const collaboratorMembers = members.filter((m) => m.group === "collaborator");

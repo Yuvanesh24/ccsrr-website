@@ -249,7 +249,7 @@ async function fetchAPI<T>(path: string, mapper: (item: StrapiResponseItem) => T
 
 export async function getMembers(): Promise<Member[]> {
   const data = await fetchAPI("/members?sort=order:asc", mapMember);
-  if (data.length === 0 && strapiError) return localMembers;
+  if (data.length === 0 && strapiError) return localMembers.map(m => ({ ...m, staticId: m.id }));
   return data;
 }
 

@@ -259,7 +259,7 @@ export const members: Member[] = [
     designation: "Research Scientist",
     qualification: "MPT, PhD",
     department: "Department of Physiotherapy, MCHP Manipal",
-    category: "Faculty",
+    category: "Research Scholar",
     group: "team",
     bio: "Dr. Akhila Jagadish is a Research Scientist at Manipal College of Health Professions, MAHE, Manipal, having completed her BPT, MPT in Neuroscience, and PhD from the same institution. Her expertise spans neurorehabilitation, stroke rehabilitation, post-stroke fatigue, EEG, transcranial direct current stimulation, and electromyography. With five years of experience, she has authored six indexed publications with an H-index of 3, and is a recipient of the IFNR Young Investigator Award at IFNRCON 2023 and a bursary award to attend the World Physiotherapy Congress 2023.",
     email: "akhila1.mchpmpl2025@learner.manipal.edu",

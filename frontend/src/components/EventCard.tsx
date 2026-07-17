@@ -54,13 +54,13 @@ export default function EventCard({ event }: EventCardProps) {
       )}
       {event.poster && event.poster !== "/placeholder.svg" && (
         <div className="mt-auto pt-4">
-          <a href={event.poster} target="_blank" rel="noopener noreferrer">
+          <a href={event.poster} target="_blank" rel="noopener noreferrer" className="block">
             <Image
               src={event.poster}
               alt={event.title}
               width={400}
               height={300}
-              className="w-full h-auto rounded-lg object-cover border border-[#E8E5E0] hover:opacity-90 transition-opacity shadow-sm"
+              className="w-full max-h-40 object-cover rounded-lg border border-[#E8E5E0] hover:opacity-90 transition-opacity shadow-sm"
             />
           </a>
         </div>
