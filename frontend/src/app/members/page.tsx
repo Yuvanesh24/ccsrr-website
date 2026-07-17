@@ -55,11 +55,22 @@ export default async function MembersPage() {
       ];
       return order.indexOf(a.name) - order.indexOf(b.name);
     });
-  const scholarsResearchers = teamMembers.filter((m) => {
-    const sid = m.staticId ? Number(m.staticId) : NaN;
-    if (isNaN(sid)) return m.category !== "Faculty";
-    return sid >= 19;
-  });
+  const scholarsResearchers = teamMembers
+    .filter((m) => {
+      const sid = m.staticId ? Number(m.staticId) : NaN;
+      if (isNaN(sid)) return m.category !== "Faculty";
+      return sid >= 19;
+    })
+    .sort((a, b) => {
+      const order = [
+        "Subramanian", "Intiaz", "Sanya", "Dorcas", "Nistara",
+        "Aparna", "Siddharth", "Tancia", "Farah", "Akshay",
+        "Megha", "Karthi", "Akhila", "Nidhi", "Yuvanesh",
+      ];
+      const aIdx = order.findIndex((o) => a.name.toLowerCase().includes(o.toLowerCase()));
+      const bIdx = order.findIndex((o) => b.name.toLowerCase().includes(o.toLowerCase()));
+      return (aIdx === -1 ? 999 : aIdx) - (bIdx === -1 ? 999 : bIdx);
+    });
   const collaboratorMembers = members.filter((m) => m.group === "collaborator");
   const formerMembers = members.filter((m) => m.group === "former");
 
