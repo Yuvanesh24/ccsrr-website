@@ -31,36 +31,38 @@ interface EventCardProps {
 
 export default function EventCard({ event }: EventCardProps) {
   return (
-    <div className="card-base bg-white p-5 flex flex-col">
-      <div style={{ height: "3px", background: "linear-gradient(90deg, #B84A18, #D97706)", borderRadius: "3px 3px 0 0", margin: "-20px -20px 16px -20px" }} />
-      <div className="mb-3">
-        <StatusBadge status={event.isUpcoming ? "Upcoming" : "Completed"} />
-      </div>
-      <h3 className="font-semibold text-[#1C1C1A] text-[15px] leading-snug">{event.title}</h3>
-      <div className="flex flex-col gap-1.5 mt-3 text-[13px] text-[#6B6860]">
-        <div className="flex items-center gap-2">
-          <Calendar className="h-3.5 w-3.5 shrink-0 text-[#B84A18]" />
-          <span>{event.date.replace(/-01-01$/, "")}</span>
+    <div className="card-base bg-white p-5 flex flex-col sm:flex-row gap-4 relative">
+      <div style={{ height: "3px", background: "linear-gradient(90deg, #B84A18, #D97706)", borderRadius: "3px 3px 0 0", position: "absolute", left: 0, right: 0, top: 0 }} />
+      <div className="flex-1 min-w-0">
+        <div className="mb-3">
+          <StatusBadge status={event.isUpcoming ? "Upcoming" : "Completed"} />
         </div>
-        {event.venue && (
+        <h3 className="font-semibold text-[#1C1C1A] text-[15px] leading-snug">{event.title}</h3>
+        <div className="flex flex-col gap-1.5 mt-3 text-[13px] text-[#6B6860]">
           <div className="flex items-center gap-2">
-            <MapPin className="h-3.5 w-3.5 shrink-0 text-[#B84A18]" />
-            <span>{event.venue}</span>
+            <Calendar className="h-3.5 w-3.5 shrink-0 text-[#B84A18]" />
+            <span>{event.date.replace(/-01-01$/, "")}</span>
           </div>
+          {event.venue && (
+            <div className="flex items-center gap-2">
+              <MapPin className="h-3.5 w-3.5 shrink-0 text-[#B84A18]" />
+              <span>{event.venue}</span>
+            </div>
+          )}
+        </div>
+        {event.description && (
+          <p className="text-[14px] text-[#4A4845] mt-3 leading-relaxed">{linkify(event.description)}</p>
         )}
       </div>
-      {event.description && (
-        <p className="text-[14px] text-[#4A4845] mt-3 leading-relaxed">{linkify(event.description)}</p>
-      )}
       {event.poster && event.poster !== "/placeholder.svg" && (
-        <div className="mt-auto pt-4">
-          <a href={event.poster} target="_blank" rel="noopener noreferrer" className="block">
+        <div className="shrink-0">
+          <a href={event.poster} target="_blank" rel="noopener noreferrer">
             <Image
               src={event.poster}
               alt={event.title}
-              width={400}
-              height={300}
-              className="w-full max-h-40 object-cover rounded-lg border border-[#E8E5E0] hover:opacity-90 transition-opacity shadow-sm"
+              width={150}
+              height={200}
+              className="w-28 sm:w-36 h-auto rounded-lg border border-[#E8E5E0] hover:opacity-90 transition-opacity shadow-sm object-cover"
             />
           </a>
         </div>

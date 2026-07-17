@@ -55,11 +55,23 @@ export default async function MembersPage() {
       ];
       return order.indexOf(a.name) - order.indexOf(b.name);
     });
-  const scholarsResearchers = teamMembers.filter((m) => {
-    const sid = m.staticId ? Number(m.staticId) : NaN;
-    if (isNaN(sid)) return m.category !== "Faculty";
-    return sid >= 19;
-  });
+  const scholarsResearchers = teamMembers
+    .filter((m) => {
+      const sid = m.staticId ? Number(m.staticId) : NaN;
+      if (isNaN(sid)) return m.category !== "Faculty";
+      return sid >= 19;
+    })
+    .sort((a, b) => {
+      const lastThree = ["Dr. Akhila Jagadish", "Ms. Nidhi Misalankar", "Yuvanesh"];
+      const aIdx = lastThree.indexOf(a.name);
+      const bIdx = lastThree.indexOf(b.name);
+      if (aIdx !== -1 && bIdx !== -1) return aIdx - bIdx;
+      if (aIdx !== -1) return 1;
+      if (bIdx !== -1) return -1;
+      const sidA = a.staticId ? Number(a.staticId) : 0;
+      const sidB = b.staticId ? Number(b.staticId) : 0;
+      return sidA - sidB;
+    });
   const collaboratorMembers = members.filter((m) => m.group === "collaborator");
   const formerMembers = members.filter((m) => m.group === "former");
 
