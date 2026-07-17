@@ -32,7 +32,7 @@ export default function ProjectCard({ project, collaborative }: ProjectCardProps
         <h3 className="font-semibold text-[#1C1C1A] text-[15px] leading-snug">{project.title}</h3>
         <div className="mt-3 space-y-1.5 text-[13px] text-[#6B6860]">
           <p>PI: <span className="text-[#1C1C1A] font-medium">{project.pi}</span></p>
-          {project.coPi && <p>Co-PI: {project.coPi}</p>}
+          {project.coPi && <p className="whitespace-pre-wrap">Co-PI: {project.coPi}</p>}
           {project.fundingAgency && !project.fundingAgency.startsWith("[") && <p>Funding Agency: {project.fundingAgency}</p>}
           {project.duration && <p>Duration: {project.duration}</p>}
         </div>
