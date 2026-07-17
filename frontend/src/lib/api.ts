@@ -5,6 +5,7 @@ import { events as localEvents } from "@/data/events";
 import type { FundedProject, PhDProject, StudentProject } from "@/data/projects";
 import { fundedProjects as localFunded, phdProjects as localPhd, studentProjects as localStudent } from "@/data/projects";
 import type { Publication } from "@/data/publications";
+import { publications as localPublications } from "@/data/publications";
 import type { Device } from "@/data/devices";
 import { devices as localDevices } from "@/data/devices";
 import type { GalleryItem } from "@/data/gallery";
@@ -292,7 +293,9 @@ export async function getEvents(): Promise<Event[]> {
 }
 
 export async function getPublications(): Promise<Publication[]> {
-  return fetchAPI("/publications?sort=year:desc", mapPublication);
+  const data = await fetchAPI("/publications?sort=year:desc", mapPublication);
+  if (data.length === 0 && strapiError) return localPublications;
+  return data;
 }
 
 export async function getGalleryItems(): Promise<GalleryItem[]> {

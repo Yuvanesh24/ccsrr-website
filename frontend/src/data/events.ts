@@ -232,4 +232,14 @@ export const events: Event[] = [
     poster: "/placeholder.svg",
     isUpcoming: false,
   },
+  {
+    id: "e23",
+    title: "CCSRR Decennial Lecture Series — Inaugural Lecture",
+    type: "Lecture",
+    date: "22 Jul 2026",
+    venue: "Microsoft Teams (Online)",
+    description: "Why isn't evidence enough? Overcoming the translational gap in stroke rehabilitation. Speaker: Dr. John Solomon M, Coordinator, CCSRR, MAHE. Join: https://teams.microsoft.com/meet/43680952256083",
+    poster: "/CCSRR_Seminar_Poster_A3_v5_300dpi.png",
+    isUpcoming: true,
+  },
 ];

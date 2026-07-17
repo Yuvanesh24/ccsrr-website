@@ -1,3 +1,4 @@
+import Image from "next/image";
 import StatusBadge from "@/components/StatusBadge";
 import { Calendar, MapPin } from "lucide-react";
 import type { Event } from "@/data/events";
@@ -28,6 +29,15 @@ export default function EventCard({ event }: EventCardProps) {
       </div>
       {event.description && (
         <p className="text-[14px] text-[#4A4845] mt-3 leading-relaxed">{event.description}</p>
+      )}
+      {event.poster && event.poster !== "/placeholder.svg" && (
+        <Image
+          src={event.poster}
+          alt={event.title}
+          width={400}
+          height={300}
+          className="w-full h-auto mt-4 rounded-lg object-cover"
+        />
       )}
     </div>
   );
