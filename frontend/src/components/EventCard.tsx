@@ -31,14 +31,12 @@ interface EventCardProps {
 
 export default function EventCard({ event }: EventCardProps) {
   return (
-    <div className="card-base bg-white p-5 flex flex-col sm:flex-row gap-4 relative">
+    <div className="card-base bg-white p-5 sm:p-6 flex flex-col sm:flex-row gap-5 sm:gap-6 relative">
       <div style={{ height: "3px", background: "linear-gradient(90deg, #B84A18, #D97706)", borderRadius: "3px 3px 0 0", position: "absolute", left: 0, right: 0, top: 0 }} />
-      <div className="flex-1 min-w-0">
-        <div className="mb-3">
-          <StatusBadge status={event.isUpcoming ? "Upcoming" : "Completed"} />
-        </div>
-        <h3 className="font-semibold text-[#1C1C1A] text-[15px] leading-snug">{event.title}</h3>
-        <div className="flex flex-col gap-1.5 mt-3 text-[13px] text-[#6B6860]">
+      <div className="flex-1 min-w-0 space-y-3">
+        <StatusBadge status={event.isUpcoming ? "Upcoming" : "Completed"} />
+        <h3 className="font-semibold text-[#1C1C1A] text-[15px] sm:text-base leading-snug">{event.title}</h3>
+        <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-[13px] text-[#6B6860]">
           <div className="flex items-center gap-2">
             <Calendar className="h-3.5 w-3.5 shrink-0 text-[#B84A18]" />
             <span>{event.date.replace(/-01-01$/, "")}</span>
@@ -51,11 +49,11 @@ export default function EventCard({ event }: EventCardProps) {
           )}
         </div>
         {event.description && (
-          <p className="text-[14px] text-[#4A4845] mt-3 leading-relaxed">{linkify(event.description)}</p>
+          <p className="text-[14px] text-[#4A4845] leading-relaxed">{linkify(event.description)}</p>
         )}
       </div>
       {event.poster && event.poster !== "/placeholder.svg" && (
-        <div className="shrink-0">
+        <div className="shrink-0 flex items-start">
           <a href={event.poster} target="_blank" rel="noopener noreferrer">
             <Image
               src={event.poster}
