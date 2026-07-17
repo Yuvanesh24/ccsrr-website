@@ -228,7 +228,10 @@ async function fetchAPI<T>(path: string, mapper: (item: StrapiResponseItem) => T
   }
 
   try {
-    const res = await fetch(url, { headers, next: { revalidate: 60 } });
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 2000);
+    const res = await fetch(url, { headers, next: { revalidate: 60 }, signal: controller.signal });
+    clearTimeout(timeout);
     if (!res.ok) {
       console.error(`Strapi API error: ${res.status} ${res.statusText} for ${url}`);
       strapiError = true;

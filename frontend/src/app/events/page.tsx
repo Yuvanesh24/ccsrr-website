@@ -15,7 +15,13 @@ export const metadata: Metadata = {
 export default async function EventsPage() {
   const events = await getEvents();
   const upcoming = events.filter((e) => e.isUpcoming);
-  const past = events.filter((e) => !e.isUpcoming);
+  const past = events
+    .filter((e) => !e.isUpcoming)
+    .sort((a, b) => {
+      const yearA = parseInt(a.date.match(/\b(20\d{2})\b/)?.[1] || "0");
+      const yearB = parseInt(b.date.match(/\b(20\d{2})\b/)?.[1] || "0");
+      return yearB - yearA;
+    });
 
   if (events.length === 0) {
     return (

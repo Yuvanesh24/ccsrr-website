@@ -28,11 +28,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-[#E8E5E0]" style={{ boxShadow: "0 1px 0 rgba(0,0,0,0.06)" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <Link href="/" className="shrink-0 flex items-center h-full py-2 -ml-3 sm:-ml-6">
+          <Link href="/" className="shrink-0 flex items-center h-full py-2">
             <img
               src="/ccsrr-logo.png"
-              alt="Stroke Rehabilitation Research"
-              className="h-14 sm:h-16 w-auto object-contain -mt-2.5 sm:-mt-1"
+              alt="Centre for Comprehensive Stroke Rehabilitation & Research"
+              className="h-20 w-auto object-contain"
             />
           </Link>
 

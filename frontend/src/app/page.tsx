@@ -104,8 +104,37 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── UPCOMING EVENTS ── */}
+      {upcomingEvents.length > 0 && (
+        <section className="section-py" style={{ background: "#FAFAF8" }}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-end justify-between mb-10">
+              <div>
+                <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-2">
+                  Coming Up
+                </p>
+                <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">Upcoming Events</h2>
+                <p className="text-[#6B6860] mt-2 text-[16px]">Workshops, conferences, and seminars</p>
+              </div>
+              <Link
+                href="/events"
+                className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-[#B84A18] hover:text-[#963C14] transition-colors"
+              >
+                View all <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-5">
+              {upcomingEvents.map((event) => (
+                <EventCard key={event.id} event={event} />
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* ── RESEARCH UPDATES ── */}
-      <section className="section-py" style={{ background: "#FAFAF8" }}>
+      <section className="section-py" style={{ background: "#ffffff" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
@@ -323,34 +352,6 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* ── EVENTS ── */}
-      {upcomingEvents.length > 0 && (
-        <section className="section-py" style={{ background: "#FAFAF8" }}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-end justify-between mb-10">
-              <div>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-2">
-                  Coming Up
-                </p>
-                <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">Upcoming Events</h2>
-                <p className="text-[#6B6860] mt-2 text-[16px]">Workshops, conferences, and seminars</p>
-              </div>
-              <Link
-                href="/events"
-                className="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-[#B84A18] hover:text-[#963C14] transition-colors"
-              >
-                View all <ArrowRight className="h-4 w-4" />
-              </Link>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-5">
-              {upcomingEvents.map((event) => (
-                <EventCard key={event.id} event={event} />
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
     </>
   );
 }
