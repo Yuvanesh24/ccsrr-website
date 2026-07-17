@@ -54,7 +54,7 @@ export default function EventCard({ event }: EventCardProps) {
               )}
             </div>
             {event.description && (
-              <p className="text-[14px] text-[#4A4845] leading-relaxed">{linkify(event.description)}</p>
+              <p className="text-[14px] text-[#4A4845] leading-relaxed whitespace-pre-wrap">{linkify(event.description)}</p>
             )}
           </div>
           <div className="shrink-0 flex items-start pt-1">
@@ -92,7 +92,7 @@ export default function EventCard({ event }: EventCardProps) {
           )}
         </div>
         {event.description && (
-          <p className="text-[14px] text-[#4A4845] leading-relaxed">{linkify(event.description)}</p>
+          <p className="text-[14px] text-[#4A4845] leading-relaxed whitespace-pre-wrap">{linkify(event.description)}</p>
         )}
       </div>
     </div>
