@@ -106,7 +106,10 @@
   font-family: var(--font-serif) !important;
 }
 
-.section-py { padding-top: 5rem; padding-bottom: 5rem; }
+.section-py { padding-top: 3rem; padding-bottom: 3rem; }
+@media (min-width: 640px) {
+  .section-py { padding-top: 5rem; padding-bottom: 5rem; }
+}
 
 .card-base {
   background: white;
