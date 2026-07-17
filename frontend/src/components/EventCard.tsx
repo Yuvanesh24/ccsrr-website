@@ -8,20 +8,21 @@ function linkify(text: string): React.ReactNode[] {
   const parts = text.split(urlRegex);
   return parts.map((part, i) => {
     if (part.match(urlRegex)) {
+      const display = part.length > 50 ? part.slice(0, 50) + "…" : part;
       return (
         <a
           key={i}
           href={part}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#B84A18] hover:text-[#963C14] underline underline-offset-2 inline-flex items-center gap-1"
+          className="text-[#B84A18] hover:text-[#963C14] underline underline-offset-2 whitespace-nowrap"
         >
-          {part.length > 60 ? part.slice(0, 60) + "…" : part}
-          <ExternalLink className="h-3 w-3 shrink-0" />
+          {display}
+          <ExternalLink className="h-3 w-3 inline-block ml-0.5 -mt-0.5" />
         </a>
       );
     }
-    return <span key={i}>{part}</span>;
+    return <span key={i} className="inline">{part}</span>;
   });
 }
 
