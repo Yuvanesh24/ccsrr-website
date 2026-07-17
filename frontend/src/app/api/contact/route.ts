@@ -27,7 +27,7 @@ export async function POST(request: Request) {
     }
 
     await resend.emails.send({
-      from: "CCSRR Website <onboarding@resend.dev>",
+      from: "CCSRR Website <noreply@strokerehabindia.com>",
       to: contactEmail,
       replyTo: email,
       subject: `Contact Form: ${name}`,
