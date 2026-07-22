@@ -165,7 +165,7 @@ export default async function MembersPage() {
           <p className="text-[#6B6860] text-[15px] mb-6">Faculty across departments at MAHE supporting stroke rehabilitation</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { name: "Dr. Aparna Pai", dept: "Prof & Head, Department of Neurology, KMC, Manipal" },
+              { name: "Dr. Aparna Ramakrishna Pai", dept: "Prof & Head, Department of Neurology, KMC, Manipal" },
               { name: "Dr. Arvind Prabhu", dept: "Prof & Head, Department of Neuromedicine, KMC, Manipal" },
               { name: "Dr. Raghavendra Nayak", dept: "Prof & Head, Department of Neurosurgery, KMC, Manipal" },
             ].map((person) => (
