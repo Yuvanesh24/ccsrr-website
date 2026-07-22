@@ -163,15 +163,11 @@ export default async function MembersPage() {
         <div className="mb-14">
           <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Internal Collaborators &amp; Stakeholders</h2>
           <p className="text-[#6B6860] text-[15px] mb-6">Faculty across departments at MAHE supporting stroke rehabilitation</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { name: "Dr. Aparna Ramakrishna Pai", dept: "Prof & Head, Department of Neurology, KMC, Manipal" },
-              { name: "Dr. Arvind Prabhu", dept: "Prof & Head, Department of Neuromedicine, KMC, Manipal" },
-              { name: "Dr. Raghavendra Nayak", dept: "Prof & Head, Department of Neurosurgery, KMC, Manipal" },
-            ].map((person) => (
-              <div key={person.name} className="card-base p-5" style={{ borderTop: "3px solid #B84A18" }}>
-                <h3 className="font-semibold text-[#1C1C1A] text-[15px]">{person.name}</h3>
-                <p className="text-[13px] text-[#6B6860] mt-1">{person.dept}</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
+            {["Dr. Aparna Ramakrishna Pai — Prof & Head, Department of Neurology, KMC, Manipal", "Dr. Arvind Prabhu — Prof & Head, Department of Neuromedicine, KMC, Manipal", "Dr. Raghavendra Nayak — Prof & Head, Department of Neurosurgery, KMC, Manipal"].map((name) => (
+              <div key={name} className="text-[15px] text-[#4A4845] flex items-center gap-2">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#B84A18] shrink-0" />
+                {name}
               </div>
             ))}
           </div>
