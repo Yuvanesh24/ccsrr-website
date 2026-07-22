@@ -110,7 +110,7 @@ const phdSorted = [...phdResearch].sort((a, b) => {
           {hasCollaborative && (
             <section>
               <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Collaborative Research</h2>
-              <p className="text-[15px] text-[#6B6860] mb-6">International and inter-institutional collaborations</p>
+              <p className="text-[15px] text-[#6B6860] mb-6">Joint research across institutions</p>
               <div className="grid md:grid-cols-2 gap-5">
                 {collaborativeSorted.map((project) => (
                   <ProjectCard key={project.id} project={project} collaborative />
@@ -131,17 +131,6 @@ const phdSorted = [...phdResearch].sort((a, b) => {
             </section>
           )}
 
-          {hasStudent && (
-            <section>
-              <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Student Projects</h2>
-              <p className="text-[15px] text-[#6B6860] mb-6">Graduate and undergraduate projects</p>
-              <div className="grid md:grid-cols-2 gap-5">
-                {studentProjects.map((project) => (
-                  <ProjectCard key={project.id} project={project} />
-                ))}
-              </div>
-            </section>
-          )}
         </div>
       </div>
     </div>

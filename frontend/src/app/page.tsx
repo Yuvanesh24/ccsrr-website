@@ -104,6 +104,21 @@ export default async function HomePage() {
         </div>
       </section>
 
+      {/* ── INTRO DESCRIPTION ── */}
+      <section className="py-16 sm:py-20 md:py-24" style={{ background: "linear-gradient(180deg, #FAFAF8 0%, #F5F3EF 100%)" }}>
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+          <div className="relative space-y-6">
+            <div className="absolute -left-4 sm:-left-6 top-0 bottom-0 w-[3px] rounded-full" style={{ background: "linear-gradient(180deg, #B84A18, #D97706)" }} />
+            <p className="text-[18px] sm:text-[20px] md:text-[22px] text-[#1C1C1A] leading-[1.8] font-medium pl-5 sm:pl-7">
+              Stroke continues to be a major global health challenge, ranking among the leading causes of death and long-term disability. The Global Burden of Disease 2019 study reported over 6.6 million deaths and 143 million disability-adjusted life years (DALYs) worldwide, with low- and middle-income countries bearing nearly 75% of this burden.
+            </p>
+            <p className="text-[18px] sm:text-[20px] md:text-[22px] text-[#1C1C1A] leading-[1.8] font-medium pl-5 sm:pl-7">
+              Stroke rehabilitation is a structured, multidisciplinary process that helps survivors regain physical, cognitive, and communicative abilities through physical, occupational, speech-language, and psychological therapies tailored to individual needs. By promoting neuroplasticity and functional retraining, it improves mobility, independence, and communication, while reducing secondary complications, ultimately enhancing functional recovery and quality of life as a core component of post-stroke care.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── UPCOMING EVENTS ── */}
       {upcomingEvents.length > 0 && (
         <section className="section-py" style={{ background: "#FAFAF8" }}>
