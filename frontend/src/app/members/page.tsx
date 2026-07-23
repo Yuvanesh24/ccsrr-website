@@ -106,9 +106,11 @@ export default async function MembersPage() {
               {coordinator.qualification && (
                 <p className="text-[#6B6860] text-base mt-1 font-medium">{coordinator.qualification}</p>
               )}
-              <p className="text-[#B84A18] mt-0.5 text-sm">{coordinator.designation}</p>
-              <p className="text-[#B84A18] text-sm font-medium mt-1">{coordinator.department}</p>
-              <p className="text-[#4A4845] mt-5 leading-relaxed max-w-2xl mx-auto text-[15px] text-left">
+              <p className="mt-0.5 text-sm">
+                <span className="text-[#1C1C1A]">Coordinator, CCSRR | Associate Dean, MCHP, MAHE | Professor</span>
+              </p>
+              <p className="text-[#B84A18] text-sm font-medium mt-1">Dept. of Physiotherapy, MCHP, MAHE</p>
+              <p className="text-[#4A4845] mt-5 leading-relaxed max-w-2xl mx-auto text-[15px] text-justify">
                 {coordinator.bio}
               </p>
               <a
@@ -163,8 +165,8 @@ export default async function MembersPage() {
         <div className="mb-14">
           <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Internal Collaborators &amp; Stakeholders</h2>
           <p className="text-[#6B6860] text-[15px] mb-6">Faculty across departments at MAHE supporting stroke rehabilitation</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
-            {["Dr. Aparna Ramakrishna Pai — Prof & Head, Department of Neurology, KMC, Manipal", "Dr. Arvind Prabhu — Prof & Head, Department of Neuromedicine, KMC, Manipal", "Dr. Raghavendra Nayak — Prof & Head, Department of Neurosurgery, KMC, Manipal"].map((name) => (
+          <div className="space-y-2">
+            {["Dr. Aparna Ramakrishna Pai - Professor & Head, Department of Neurology, KMC, Manipal", "Dr. Arvind Prabhu - Professor & Head, Department of Neuromedicine, KMC, Manipal", "Dr. Raghavendra Nayak - Professor & Head, Department of Neurosurgery, KMC, Manipal"].map((name) => (
               <div key={name} className="text-[15px] text-[#4A4845] flex items-center gap-2">
                 <div className="h-1.5 w-1.5 rounded-full bg-[#B84A18] shrink-0" />
                 {name}

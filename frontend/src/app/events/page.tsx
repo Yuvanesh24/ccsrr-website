@@ -18,9 +18,16 @@ export default async function EventsPage() {
   const past = events
     .filter((e) => !e.isUpcoming)
     .sort((a, b) => {
-      const yearA = parseInt(a.date.match(/\b(20\d{2})\b/)?.[1] || "0");
-      const yearB = parseInt(b.date.match(/\b(20\d{2})\b/)?.[1] || "0");
-      return yearB - yearA;
+      const parseDate = (d: string) => {
+        const match = d.match(/(\d{1,2})?\s*(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)?\w*\.?\s*(20\d{2})/i);
+        if (!match) return 0;
+        const months: Record<string, number> = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+        const day = match[1] ? parseInt(match[1]) : 1;
+        const month = months[(match[2] || "").slice(0, 3).toLowerCase()] || 1;
+        const year = parseInt(match[3]);
+        return year * 10000 + month * 100 + day;
+      };
+      return parseDate(b.date) - parseDate(a.date);
     });
 
   if (events.length === 0) {

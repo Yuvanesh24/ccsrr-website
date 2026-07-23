@@ -24,7 +24,7 @@ export const members: Member[] = [
     photo: "/members/DrJohn2024.JPG",
     designation: "",
     qualification: "MPT, PhD",
-    department: "Coordinator, CCSRR | Associate Dean, MCHP, MAHE | Professor, Dept. of Physiotherapy, MCHP, MAHE",
+    department: " Coordinator, CCSRR | Associate Dean, MCHP, MAHE | Professor, Dept. of Physiotherapy, MCHP, MAHE",
     category: "Coordinator",
     group: "team",
     bio: "Dr. John Solomon M coordinates the CCSRR and leads multidisciplinary stroke rehabilitation research. He serves as Associate Dean at the Manipal College of Health Professions (MCHP), MAHE, and is a Professor in the Department of Physiotherapy. He oversees all centre activities, research projects, and collaborations. His research focuses on upper limb motor recovery, neuromodulation, and innovative rehabilitation approaches for stroke survivors.",
@@ -120,7 +120,7 @@ export const members: Member[] = [
   {
     id: "9",
     name: "Dr. Akshatha Nayak",
-    photo: "/members/Akshatha_nayak.jpg",
+    photo: "/members/DrAkshathaNayak.jpg",
     designation: "Assistant Professor - Selection Grade",
     qualification: "MPT, PhD",
     department: "Department of Physiotherapy, KMC Mangalore",

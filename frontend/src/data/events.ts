@@ -238,8 +238,8 @@ export const events: Event[] = [
     type: "Lecture",
     date: "22 Jul 2026",
     venue: "Microsoft Teams (Online)",
-    description: "Why isn't evidence enough? Overcoming the translational gap in stroke rehabilitation. Speaker: Dr. John Solomon M, Coordinator, CCSRR, MAHE.\nJoin: https://teams.microsoft.com/meet/43680952256083",
+    description: "Why isn't evidence enough? Overcoming the translational gap in stroke rehabilitation. Speaker: Dr. John Solomon M, Coordinator, CCSRR, MAHE.",
     poster: "/CCSRR_Seminar_Poster_A3_v5_300dpi.png",
-    isUpcoming: true,
+    isUpcoming: false,
   },
 ];
