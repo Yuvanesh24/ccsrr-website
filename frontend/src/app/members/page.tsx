@@ -110,7 +110,7 @@ export default async function MembersPage() {
                 <span className="text-[#1C1C1A]">Coordinator, CCSRR | Associate Dean, MCHP, MAHE | Professor</span>
               </p>
               <p className="text-[#B84A18] text-sm font-medium mt-1">Dept. of Physiotherapy, MCHP, MAHE</p>
-              <p className="text-[#4A4845] mt-5 leading-relaxed max-w-2xl mx-auto text-[15px] text-justify">
+              <p className="text-[#4A4845] mt-5 leading-relaxed max-w-2xl mx-auto text-[16px] text-justify">
                 {coordinator.bio}
               </p>
               <a
@@ -127,7 +127,7 @@ export default async function MembersPage() {
         {faculties.length > 0 && (
           <div className="mb-14">
             <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Faculties</h2>
-            <p className="text-[#6B6860] text-[15px] mb-6">Academic faculty driving our mission</p>
+            <p className="text-[#6B6860] text-[16px] mb-6">Academic faculty driving our mission</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {faculties.map((member) => (
                 <MemberCard key={member.id} member={member} />
@@ -139,7 +139,7 @@ export default async function MembersPage() {
         {scholarsResearchers.length > 0 && (
           <div className="mb-14">
             <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Scholars &amp; Researchers</h2>
-            <p className="text-[#6B6860] text-[15px] mb-6">Doctoral scholars and research associates</p>
+            <p className="text-[#6B6860] text-[16px] mb-6">Doctoral scholars and research associates</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {scholarsResearchers.map((member) => (
                 <MemberCard key={member.id} member={member} />
@@ -152,7 +152,7 @@ export default async function MembersPage() {
         {formerMembers.length > 0 && (
           <div className="mb-14">
             <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Former Members</h2>
-            <p className="text-[#6B6860] text-[15px] mb-6">Past contributors to CCSRR</p>
+            <p className="text-[#6B6860] text-[16px] mb-6">Past contributors to CCSRR</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {formerMembers.map((member) => (
                 <MemberCard key={member.id} member={member} />
@@ -164,29 +164,51 @@ export default async function MembersPage() {
         {/* Internal Collaborators */}
         <div className="mb-14">
           <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Internal Collaborators &amp; Stakeholders</h2>
-          <p className="text-[#6B6860] text-[15px] mb-6">Faculty across departments at MAHE supporting stroke rehabilitation</p>
-          <div className="space-y-2">
-            {["Dr. Aparna Ramakrishna Pai - Professor & Head, Department of Neurology, KMC, Manipal", "Dr. Arvind Prabhu - Professor & Head, Department of Neuromedicine, KMC, Manipal", "Dr. Raghavendra Nayak - Professor & Head, Department of Neurosurgery, KMC, Manipal"].map((name) => (
-              <div key={name} className="text-[15px] text-[#4A4845] flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-[#B84A18] shrink-0" />
-                {name}
-              </div>
-            ))}
-          </div>
+          <p className="text-[#6B6860] text-[16px] mb-6">Faculty across departments at MAHE supporting stroke rehabilitation</p>
+          <div className="space-y-3">
+              {[
+                { name: "Dr. Aparna Ramakrishna Pai", title: "Professor", dept: "Department of Neurology", inst: "Kasturba Medical College, Manipal" },
+                { name: "Dr. Arvind N Prabhu", title: "Professor & Head", dept: "Department of Neurology", inst: "Kasturba Medical College, Manipal" },
+                { name: "Dr. Raghavendra Nayak", title: "Professor & Head", dept: "Department of Neurosurgery", inst: "Kasturba Medical College, Manipal" },
+                { name: "Dr. Lakshmi Prasad G", title: "Professor", dept: "Department of Neurosurgery", inst: "Kasturba Medical College, Manipal" },
+              ].map((person) => (
+                <div key={person.name} className="flex items-start gap-2 text-justify">
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#B84A18] shrink-0 mt-2" />
+                  <div>
+                    <span className="text-[16px] text-[#4A4845] font-medium">{person.name}</span>
+                    <p className="text-[14px] text-[#6B6860]">
+                      {person.title}, {person.dept}, {person.inst}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
         </div>
 
         {/* Collaborators */}
         <div className="mb-14">
           <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Collaborators</h2>
-          <p className="text-[#6B6860] text-[15px] mb-6">External partners and clinical collaborators</p>
+          <p className="text-[#6B6860] text-[16px] mb-6">External partners and clinical collaborators</p>
 
           <div className="mb-6">
             <h3 className="font-semibold text-lg text-[#1C1C1A] mb-3">National</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              {["Dr. Jeyaraj Pandian", "Dr. Sivakumar", "Dr. Sivakumar Balasubramanian", "Dr. Karthik Babu", "Dr. Dorcas Gandhi"].map((name) => (
-                <div key={name} className="text-[15px] text-[#4A4845] flex items-center gap-2">
-                  <div className="h-1.5 w-1.5 rounded-full bg-[#B84A18] shrink-0" />
-                  {name}
+            <div className="space-y-3">
+              {[
+                { name: "Dr. Jeyaraj D Pandian", title: "Principal (Dean), Professor and Head", dept: "Department of Neurology", inst: "CMC Ludhiana" },
+                { name: "Dr. Sivakumar Balasubramanian", title: "Professor and Head", dept: "Department of Bioengineering", inst: "CMC Vellore" },
+                { name: "Dr. Dorcas Gandhi", title: "Vice Principal and Professor", dept: "Department of Neurology", inst: "CMC Ludhiana" },
+                { name: "Dr. Karthik Babu", title: "Principal & Professor", dept: "College of Physiotherapy",inst: "Sri Ramachandra Institute of Higher Education and Research, Coimbatore, Tamil Nadu" },
+              ].map((person) => (
+                <div key={person.name} className="flex items-start gap-2 text-justify">
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#B84A18] shrink-0 mt-2" />
+                  <div>
+                    <span className="text-[16px] text-[#4A4845] font-medium">{person.name}</span>
+                    {person.title && (
+                      <p className="text-[14px] text-[#6B6860]">
+                        {person.title}{person.dept && person.dept !== "—" ? `, ${person.dept}` : ""}{person.inst ? `, ${person.inst}` : ""}
+                      </p>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -194,11 +216,30 @@ export default async function MembersPage() {
 
           <div>
             <h3 className="font-semibold text-lg text-[#1C1C1A] mb-3">International</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2">
-              {["Dr. Mindy F Levin", "Dr. Julie Bernhardt", "Dr. Coralie English", "Dr. Philippe Archambault", "Dr. Dario Liebermann", "Dr. Janice Eng", "Dr. Heidi Janssen", "Dr. Marie-Louise Bird", "Dr. Catherine Sackley", "Dr. Sangeetha Madhavan", "Dr. Chitra Balasubramanian", "Dr. Sandeep Subramanian", "Dr. Anna Kuppuswamy"].map((name) => (
-                <div key={name} className="text-[15px] text-[#4A4845] flex items-center gap-2">
-                  <div className="h-1.5 w-1.5 rounded-full bg-[#7C3AED] shrink-0" />
-                  {name}
+            <div className="space-y-3">
+              {[
+                { name: "Dr. Mindy F. Levin", title: "Professor", dept: "School of Physical and Occupational Therapy", inst: "McGill University, Canada" },
+                { name: "Dr. Julie Bernhardt", title: "Professor", dept: "The Florey Institute of Neuroscience and Mental Health (Austin Site), Stroke Division", inst: "University of Melbourne, VIC, Australia" },
+                { name: "Dr. Coralie English", title: "Associate Dean Research and Innovation", dept: "College of Health, Medicine and Wellbeing", inst: "University of New Castle, Australia" },
+                { name: "Dr. Philippe Archambault", title: "Professor", dept: "School of Physical and Occupational Therapy", inst: "McGill University, Canada" },
+                { name: "Dr. Dario Liebermann", title: "Professor", dept: "Department of Physical Therapy", inst: "Tel Aviv University, Israel" },
+                { name: "Dr. Janice Eng", title: "Professor", dept: "Department of Physical Therapy", inst: "University of British Columbia (UBC)" },
+                { name: "Dr. Heidi Janssen", title: "Postdoctoral Fellow", dept: "School of Health Sciences", inst: "University of New Castle, Australia" },
+                { name: "Dr. Marie-Louise Bird", title: "Professor & Head", dept: "Discipline of Physiotherapy, Institute of Health and Wellbeing", inst: "Federation University Australia" },
+                { name: "Dr. Catherine Sackley", title: "Professor of Rehabilitation", dept: "School of Health Sciences", inst: "Kings College, London" },
+                { name: "Dr. Sangeetha Madhavan", title: "Professor and Associate Dean", dept: "Department of Physical Therapy", inst: "University of Illinois, Chicago" },
+                { name: "Dr. Chitra Balasubramanian", title: "Professor", dept: "Department of Physical Therapy", inst: "University of North Florida, USA" },
+                { name: "Dr. Sandeep Subramanian", title: "Associate Professor", dept: "Department of Physical Therapy", inst: "UT Health San Antonio, USA" },
+                { name: "Dr. Anna Kuppuswamy", title: "Lecturer", dept: "Department", inst: "University of Leeds, UK" },
+              ].map((person) => (
+                <div key={person.name} className="flex items-start gap-2 text-justify">
+                  <div className="h-1.5 w-1.5 rounded-full bg-[#7C3AED] shrink-0 mt-2" />
+                  <div>
+                    <span className="text-[16px] text-[#4A4845] font-medium">{person.name}</span>
+                    <p className="text-[14px] text-[#6B6860]">
+                      {person.title}, {person.dept}, {person.inst}
+                    </p>
+                  </div>
                 </div>
               ))}
             </div>

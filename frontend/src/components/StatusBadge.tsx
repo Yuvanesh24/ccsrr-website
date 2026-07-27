@@ -19,7 +19,7 @@ export default function StatusBadge({ status, className }: StatusBadgeProps) {
   };
 
   return (
-    <Badge variant="outline" className={cn(colorMap[status], "font-medium text-[11px] px-2 py-0.5", className)}>
+    <Badge variant="outline" className={cn(colorMap[status], "font-medium text-[12px] px-2 py-0.5", className)}>
       {status}
     </Badge>
   );

@@ -39,7 +39,7 @@ export default async function HomePage() {
                 stroke rehabilitation research
               </h1>
               <p className="mt-2 text-sm text-white/50 tracking-wider uppercase">hosted by centre for comprehensive stroke rehabilitation and research <span className="text-[#D4825A] font-semibold">(ccsrr)</span></p>
-              <p className="mt-6 text-[17px] text-white/65 max-w-lg leading-relaxed">
+              <p className="mt-6 text-[18px] text-white/65 max-w-lg leading-relaxed">
                 Advancing stroke recovery through cutting-edge research, innovative clinical practices,
                 and interdisciplinary collaboration, translating evidence into meaningful outcomes.
               </p>
@@ -94,7 +94,7 @@ export default async function HomePage() {
                   >
                     <Icon className="h-5 w-5 mx-auto mb-2 opacity-70" style={{ color: "#F4A87A" }} />
                     <p className="text-3xl font-bold text-white">{value}</p>
-                    <p className="text-[11px] text-white/50 mt-0.5 uppercase tracking-wide">{label}</p>
+                    <p className="text-[12px] text-white/50 mt-0.5 uppercase tracking-wide">{label}</p>
                   </div>
                 ))}
               </div>
@@ -109,10 +109,10 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           <div className="relative space-y-6">
             <div className="absolute -left-4 sm:-left-6 top-0 bottom-0 w-[3px] rounded-full" style={{ background: "linear-gradient(180deg, #B84A18, #D97706)" }} />
-            <p className="text-[18px] sm:text-[20px] md:text-[22px] text-[#1C1C1A] leading-[1.8] font-medium pl-5 sm:pl-7 text-justify">
+            <p className="text-[19px] sm:text-[21px] md:text-[23px] text-[#1C1C1A] leading-[1.8] pl-5 sm:pl-7 text-justify">
               Stroke continues to be a major global health challenge, ranking among the leading causes of death and long-term disability. The Global Burden of Disease 2019 study reported over 6.6 million deaths and 143 million disability-adjusted life years (DALYs) worldwide, with low- and middle-income countries bearing nearly 75% of this burden. The prevalence of stroke in India reached 9.4 million in 2021, marking a 47% increase over the previous three decades.
             </p>
-            <p className="text-[18px] sm:text-[20px] md:text-[22px] text-[#1C1C1A] leading-[1.8] font-medium pl-5 sm:pl-7 text-justify">
+            <p className="text-[19px] sm:text-[21px] md:text-[23px] text-[#1C1C1A] leading-[1.8] pl-5 sm:pl-7 text-justify">
               Stroke rehabilitation is a structured, multidisciplinary process that helps survivors regain physical, cognitive, and communicative abilities through physical, occupational, speech-language, and psychological therapies tailored to individual needs. By promoting neuroplasticity and functional retraining, it improves mobility, independence, and communication, while reducing secondary complications, ultimately enhancing functional recovery and quality of life as a core component of post-stroke care.
             </p>
           </div>
@@ -125,11 +125,11 @@ export default async function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-2">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-2">
                   Coming Up
                 </p>
                 <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">Upcoming Events</h2>
-                <p className="text-[#6B6860] mt-2 text-[16px]">Workshops, conferences, and seminars</p>
+                <p className="text-[#6B6860] mt-2 text-[17px]">Workshops, conferences, and seminars</p>
               </div>
               <Link
                 href="/events"
@@ -152,11 +152,11 @@ export default async function HomePage() {
       <section className="section-py" style={{ background: "#ffffff" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
               Latest
             </p>
             <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">Research Updates</h2>
-            <p className="mt-3 text-[#6B6860] max-w-lg mx-auto text-[16px]">
+            <p className="mt-3 text-[#6B6860] max-w-lg mx-auto text-[17px]">
               Recent news and developments from CCSRR
             </p>
           </div>
@@ -179,9 +179,9 @@ export default async function HomePage() {
               },
             ].map((update) => (
               <div key={update.title} className="card-base bg-white p-5">
-                  <p className="text-[12px] font-semibold text-[#B84A18] uppercase tracking-wide mb-2">{update.date}</p>
-                  <h3 className="font-semibold text-[15px] text-[#1C1C1A] mb-2 leading-snug">{update.title}</h3>
-                  <p className="text-[14px] text-[#6B6860] leading-relaxed">{update.excerpt}</p>
+                  <p className="text-[13px] font-semibold text-[#B84A18] uppercase tracking-wide mb-2">{update.date}</p>
+                  <h3 className="font-semibold text-[16px] text-[#1C1C1A] mb-2 leading-snug">{update.title}</h3>
+                  <p className="text-[15px] text-[#6B6860] leading-relaxed">{update.excerpt}</p>
                 </div>
               ))}
             </div>
@@ -192,11 +192,11 @@ export default async function HomePage() {
       <section className="section-py bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
               What We Do
             </p>
             <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">Our Focus Areas</h2>
-            <p className="mt-3 text-[#6B6860] max-w-lg mx-auto text-[16px]">
+            <p className="mt-3 text-[#6B6860] max-w-lg mx-auto text-[17px]">
               Five pillars driving our mission to transform stroke rehabilitation
             </p>
           </div>
@@ -227,16 +227,16 @@ export default async function HomePage() {
             ].map((area) => (
                 <div key={area.num} className="card-base bg-white p-6">
                 <div
-                  className="text-[12px] font-bold tracking-widest mb-4"
+                  className="text-[13px] font-bold tracking-widest mb-4"
                   style={{ color: area.color, opacity: 0.5 }}
                 >
                   {area.num}
                 </div>
-                <h3 className="font-semibold text-[18px] text-[#1C1C1A] mb-2">{area.title}</h3>
-                <p className="text-[15px] text-[#6B6860] leading-relaxed mb-4">{area.desc}</p>
+                <h3 className="font-semibold text-[19px] text-[#1C1C1A] mb-2">{area.title}</h3>
+                <p className="text-[16px] text-[#6B6860] leading-relaxed mb-4">{area.desc}</p>
                 <ul className="space-y-2">
                   {area.items.map((item) => (
-                    <li key={item} className="flex items-center gap-2 text-[14px] text-[#4A4845]">
+                    <li key={item} className="flex items-center gap-2 text-[15px] text-[#4A4845]">
                       <div
                         className="h-1.5 w-1.5 rounded-full shrink-0"
                         style={{ background: area.color }}
@@ -252,19 +252,19 @@ export default async function HomePage() {
           <div className="flex flex-col md:flex-row justify-center gap-6 mt-6">
             <div className="flex-1 w-full">
               <div className="card-base bg-white p-6">
-                <div className="text-[12px] font-bold tracking-widest mb-4" style={{ color: "#0369A1", opacity: 0.5 }}>04</div>
-                <h3 className="font-semibold text-[18px] text-[#1C1C1A] mb-2">Evidence Based Practice</h3>
-                <p className="text-[15px] text-[#6B6860] leading-relaxed mb-4">Translating research into clinical practice for better stroke care.</p>
+                <div className="text-[13px] font-bold tracking-widest mb-4" style={{ color: "#0369A1", opacity: 0.5 }}>04</div>
+                <h3 className="font-semibold text-[19px] text-[#1C1C1A] mb-2">Evidence Based Practice</h3>
+                <p className="text-[16px] text-[#6B6860] leading-relaxed mb-4">Translating research into clinical practice for better stroke care.</p>
                 <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-[14px] text-[#4A4845]">
+                  <li className="flex items-center gap-2 text-[15px] text-[#4A4845]">
                     <div className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "#0369A1" }} />
                     Evaluation of healthcare practices
                   </li>
-                  <li className="flex items-center gap-2 text-[14px] text-[#4A4845]">
+                  <li className="flex items-center gap-2 text-[15px] text-[#4A4845]">
                     <div className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "#0369A1" }} />
                     Development of clinical practice guidelines
                   </li>
-                  <li className="flex items-center gap-2 text-[14px] text-[#4A4845]">
+                  <li className="flex items-center gap-2 text-[15px] text-[#4A4845]">
                     <div className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "#0369A1" }} />
                     Application of implementation science principles
                   </li>
@@ -273,19 +273,19 @@ export default async function HomePage() {
             </div>
             <div className="flex-1 w-full">
               <div className="card-base bg-white p-6">
-                <div className="text-[12px] font-bold tracking-widest mb-4" style={{ color: "#9333EA", opacity: 0.5 }}>05</div>
-                <h3 className="font-semibold text-[18px] text-[#1C1C1A] mb-2">Assessment &amp; Predictions</h3>
-                <p className="text-[15px] text-[#6B6860] leading-relaxed mb-4">Measuring outcomes and predicting recovery to guide clinical decisions.</p>
+                <div className="text-[13px] font-bold tracking-widest mb-4" style={{ color: "#9333EA", opacity: 0.5 }}>05</div>
+                <h3 className="font-semibold text-[19px] text-[#1C1C1A] mb-2">Assessment &amp; Predictions</h3>
+                <p className="text-[16px] text-[#6B6860] leading-relaxed mb-4">Measuring outcomes and predicting recovery to guide clinical decisions.</p>
                 <ul className="space-y-2">
-                  <li className="flex items-center gap-2 text-[14px] text-[#4A4845]">
+                  <li className="flex items-center gap-2 text-[15px] text-[#4A4845]">
                     <div className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "#9333EA" }} />
                     Qualitative and quantitative assessments
                   </li>
-                  <li className="flex items-center gap-2 text-[14px] text-[#4A4845]">
+                  <li className="flex items-center gap-2 text-[15px] text-[#4A4845]">
                     <div className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "#9333EA" }} />
                     Development and validation of prediction models
                   </li>
-                  <li className="flex items-center gap-2 text-[14px] text-[#4A4845]">
+                  <li className="flex items-center gap-2 text-[15px] text-[#4A4845]">
                     <div className="h-1.5 w-1.5 rounded-full shrink-0" style={{ background: "#9333EA" }} />
                     Data driven analysis to support healthcare planning
                   </li>
@@ -301,11 +301,11 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-end justify-between mb-10">
             <div>
-              <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-2">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-2">
                 The People
               </p>
               <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">Our Team</h2>
-              <p className="text-[#6B6860] mt-2 text-[16px]">
+              <p className="text-[#6B6860] mt-2 text-[17px]">
                 Researchers, clinicians, and scholars driving innovation
               </p>
             </div>
@@ -344,11 +344,11 @@ export default async function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-end justify-between mb-10">
               <div>
-                <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-2">
+                <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-2">
                   Active Work
                 </p>
                 <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">Research Projects</h2>
-                <p className="text-[#6B6860] mt-2 text-[16px]">Funded research and doctoral work</p>
+                <p className="text-[#6B6860] mt-2 text-[17px]">Funded research and doctoral work</p>
               </div>
               <Link
                 href="/projects"

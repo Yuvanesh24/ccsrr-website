@@ -31,7 +31,7 @@ export default function ContactPage() {
           <div className="md:col-span-2 space-y-5">
             <div className="card-base p-6">
               <h3 className="font-semibold text-[#1C1C1A] text-lg mb-4">Contact Information</h3>
-              <div className="space-y-4 text-[14px] text-[#6B6860]">
+              <div className="space-y-4 text-[15px] text-[#6B6860]">
                 <div className="flex items-start gap-3">
                   <div className="h-8 w-8 rounded-full bg-[#FEF7F2] flex items-center justify-center shrink-0">
                     <Mail className="h-4 w-4 text-[#B84A18]" />
@@ -61,7 +61,7 @@ export default function ContactPage() {
 
             <div className="card-base p-6">
               <h3 className="font-semibold text-[#1C1C1A] text-lg mb-2">About MAHE Manipal</h3>
-              <p className="text-[14px] text-[#6B6860] leading-relaxed">
+              <p className="text-[15px] text-[#6B6860] leading-relaxed">
                 Manipal Academy of Higher Education (MAHE) is an Institution of Eminence deemed-to-be university
                 with a rich legacy in health sciences education and research.
               </p>

@@ -20,16 +20,16 @@ export default function PublicationCard({ publication }: PublicationCardProps) {
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-[11px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full" style={{ background: style.bg, color: style.text }}>
+            <span className="text-[12px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full" style={{ background: style.bg, color: style.text }}>
               {publication.category}
             </span>
             {publication.year && (
-              <span className="text-[13px] text-[#9A9795]">{publication.year}</span>
+              <span className="text-[14px] text-[#9A9795]">{publication.year}</span>
             )}
           </div>
-          <h3 className="font-semibold text-[#1C1C1A] text-[15px] leading-snug">{publication.title}</h3>
-          <p className="text-[13px] text-[#6B6860] mt-1">{publication.authors}</p>
-          <p className="text-[12px] text-[#9A9795] mt-0.5 italic">{publication.journal}</p>
+          <h3 className="font-semibold text-[#1C1C1A] text-[16px] leading-snug">{publication.title}</h3>
+          <p className="text-[14px] text-[#6B6860] mt-1">{publication.authors}</p>
+          <p className="text-[13px] text-[#9A9795] mt-0.5 italic">{publication.journal}</p>
         </div>
         {publication.link && (
           <a

@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           <div className="lg:col-span-4 space-y-4">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-[#D4825A] mb-2">Hosted by</p>
+              <p className="text-[12px] font-semibold uppercase tracking-widest text-[#D4825A] mb-2">Hosted by</p>
               <h3 className="text-lg font-semibold text-white leading-snug">
                 Centre for Comprehensive<br />Stroke Rehabilitation &amp; Research
               </h3>
@@ -28,7 +28,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2 space-y-3">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-[#D4825A]">Navigation</p>
+            <p className="text-[12px] font-semibold uppercase tracking-widest text-[#D4825A]">Navigation</p>
             <ul className="space-y-2">
               {[
                 { label: "Home", href: "/" },
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2 space-y-3">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-[#D4825A]">Research Areas</p>
+            <p className="text-[12px] font-semibold uppercase tracking-widest text-[#D4825A]">Research Areas</p>
             <ul className="space-y-2 text-sm text-[#C8A898]">
               <li>Stroke Rehabilitation</li>
               <li>Neurorecovery</li>
@@ -60,7 +60,7 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-4 space-y-3">
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-[#D4825A]">Find Us</p>
+            <p className="text-[12px] font-semibold uppercase tracking-widest text-[#D4825A]">Find Us</p>
             <div className="map-container rounded-lg overflow-hidden border border-white/10" style={{ height: "200px" }}>
               <iframe
                 src="https://maps.google.com/maps?q=Manipal+College+of+Health+Professions+MAHE+Manipal&output=embed"

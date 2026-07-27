@@ -37,7 +37,7 @@ export default function MemberCard({ member }: MemberCardProps) {
 
           {member.bio && isHovered && !flipped && (
             <div className="absolute inset-x-0 top-0 bottom-14 z-10 flex items-center justify-center bg-white/70 rounded-lg pointer-events-none">
-              <span className="text-[13px] text-[#B84A18] font-semibold bg-white px-4 py-2 rounded-full shadow-sm border border-[#E8E5E0]">
+              <span className="text-[14px] text-[#B84A18] font-semibold bg-white px-4 py-2 rounded-full shadow-sm border border-[#E8E5E0]">
                 Click to see bio
               </span>
             </div>
@@ -62,17 +62,17 @@ export default function MemberCard({ member }: MemberCardProps) {
               </div>
             )}
 
-            <h3 className="font-semibold text-[#1C1C1A] text-[17px] leading-snug">
+            <h3 className="font-semibold text-[#1C1C1A] text-[18px] leading-snug">
               {member.name}
             </h3>
             {member.qualification && (
-              <p className="text-[14px] text-[#6B6860] mt-0.5 font-medium">{member.qualification}</p>
+              <p className="text-[15px] text-[#6B6860] mt-0.5 font-medium">{member.qualification}</p>
             )}
             {member.designation && (
-              <p className="text-[13px] text-[#9A9795] mt-0.5 line-clamp-2">{member.designation}</p>
+              <p className="text-[14px] text-[#9A9795] mt-0.5 line-clamp-2">{member.designation}</p>
             )}
             {member.department && (
-              <p className="text-[13px] text-[#B84A18] font-medium mt-1.5">{member.department}</p>
+              <p className="text-[14px] text-[#B84A18] font-medium mt-1.5">{member.department}</p>
             )}
 
             <div className="flex-1" />
@@ -84,7 +84,7 @@ export default function MemberCard({ member }: MemberCardProps) {
                 className="mt-5 pt-3 border-t border-[#F0EDE8] flex items-center gap-2 w-full justify-center"
               >
                 <Mail className="h-4 w-4 shrink-0 text-[#B84A18]" />
-                <span className="text-[13px] text-[#6B6860] hover:text-[#B84A18] transition-colors truncate">
+                <span className="text-[14px] text-[#6B6860] hover:text-[#B84A18] transition-colors truncate">
                   {member.email}
                 </span>
               </a>
@@ -96,11 +96,11 @@ export default function MemberCard({ member }: MemberCardProps) {
         <div className="[backface-visibility:hidden] absolute inset-0 [transform:rotateY(180deg)] bg-white rounded-lg flex flex-col overflow-hidden" style={{ borderTop: "3px solid #B84A18" }}>
           <div className="p-6 flex flex-col flex-1 min-h-0">
             <div className="flex items-center justify-between mb-4 shrink-0">
-              <h3 className="font-semibold text-[#1C1C1A] text-[15px]">{member.name}</h3>
+              <h3 className="font-semibold text-[#1C1C1A] text-[16px]">{member.name}</h3>
               <X className="h-4 w-4 text-[#6B6860]" />
             </div>
             <div className="flex-1 overflow-y-auto min-h-0">
-              <p className="text-[14px] text-[#4A4845] leading-relaxed text-left">
+              <p className="text-[15px] text-[#4A4845] leading-relaxed text-left">
                 {member.bio}
               </p>
             </div>

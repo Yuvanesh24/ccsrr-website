@@ -120,8 +120,8 @@ export default function PublicationChart({ counts, selected, onSelect }: ChartPr
               onMouseLeave={() => {}}
             >
               <span className="w-3 h-3 rounded-[3px] flex-shrink-0" style={{ background: color }} />
-              <span className="text-[15px]" style={{ color: "var(--foreground)" }}>{label}</span>
-              <span className="text-[15px] font-medium" style={{ color }}>{pct}%</span>
+              <span className="text-[16px]" style={{ color: "var(--foreground)" }}>{label}</span>
+              <span className="text-[16px] font-medium" style={{ color }}>{pct}%</span>
             </button>
           );
         })}
