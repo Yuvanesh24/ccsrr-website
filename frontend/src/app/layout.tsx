@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name} | MAHE Manipal`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/brain-crescent-icon.png",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
