@@ -198,6 +198,7 @@ export default async function MembersPage() {
                 { name: "Dr. Sivakumar Balasubramanian", title: "Professor and Head", dept: "Department of Bioengineering", inst: "CMC Vellore" },
                 { name: "Dr. Dorcas Gandhi", title: "Vice Principal and Professor", dept: "Department of Neurology", inst: "CMC Ludhiana" },
                 { name: "Dr. Karthik Babu", title: "Principal & Professor", dept: "College of Physiotherapy",inst: "Sri Ramachandra Institute of Higher Education and Research, Coimbatore, Tamil Nadu" },
+                { name: "Dr. Sivakumar Ramachandran", title: "Professor", dept: "Department of Physiotherapy", inst: "Sri Ramachandra Institute of Higher Education and Research, Chennai" },
               ].map((person) => (
                 <div key={person.name} className="flex items-start gap-2 text-justify">
                   <div className="h-1.5 w-1.5 rounded-full bg-[#B84A18] shrink-0 mt-2" />
@@ -231,6 +232,7 @@ export default async function MembersPage() {
                 { name: "Dr. Chitra Balasubramanian", title: "Professor", dept: "Department of Physical Therapy", inst: "University of North Florida, USA" },
                 { name: "Dr. Sandeep Subramanian", title: "Associate Professor", dept: "Department of Physical Therapy", inst: "UT Health San Antonio, USA" },
                 { name: "Dr. Anna Kuppuswamy", title: "Lecturer", dept: "Department", inst: "University of Leeds, UK" },
+                { name: "Dr. Divya Bharatkumar Adhia", title: "Senior Research Fellow", dept: "Department of Surgical Sciences, Dunedin School of Medicine", inst: "University of Otago, New Zealand" },
               ].map((person) => (
                 <div key={person.name} className="flex items-start gap-2 text-justify">
                   <div className="h-1.5 w-1.5 rounded-full bg-[#7C3AED] shrink-0 mt-2" />
