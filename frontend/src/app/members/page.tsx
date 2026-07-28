@@ -187,7 +187,7 @@ export default async function MembersPage() {
 
         {/* Adjunct Faculty */}
         <div className="mb-14">
-          <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Adjunct Faculties</h2>
+          <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Adjunct Faculty</h2>
           <p className="text-[#6B6860] text-[16px] mb-6">Affiliated faculty contributing to CCSRR research</p>
           <div className="space-y-3">
             {[
@@ -245,7 +245,6 @@ export default async function MembersPage() {
               {[
                 { name: "Dr. Mindy F. Levin", title: "Professor", dept: "School of Physical and Occupational Therapy", inst: "McGill University, Canada" },
                 { name: "Dr. Julie Bernhardt", title: "Professor", dept: "The Florey Institute of Neuroscience and Mental Health (Austin Site), Stroke Division", inst: "University of Melbourne, VIC, Australia" },
-                { name: "Dr. Coralie English", title: "Associate Dean Research and Innovation", dept: "College of Health, Medicine and Wellbeing", inst: "University of New Castle, Australia" },
                 { name: "Dr. Philippe Archambault", title: "Professor", dept: "School of Physical and Occupational Therapy", inst: "McGill University, Canada" },
                 { name: "Dr. Dario Liebermann", title: "Professor", dept: "Department of Physical Therapy", inst: "Tel Aviv University, Israel" },
                 { name: "Dr. Janice Eng", title: "Professor", dept: "Department of Physical Therapy", inst: "University of British Columbia (UBC)" },
