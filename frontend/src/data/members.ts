@@ -317,6 +317,7 @@ export const members: Member[] = [
     id: "25",
     name: "Mr. Siddharth Nitinbhai Savadia",
     photo: "/members/Siddharth.jpg",
+    imagePosition: "center 50%",
     designation: "PhD Scholar",
     qualification: "MPT",
     department: "Department of Physiotherapy, MCHP Manipal",
