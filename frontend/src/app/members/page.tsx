@@ -185,6 +185,30 @@ export default async function MembersPage() {
             </div>
         </div>
 
+        {/* Adjunct Faculty */}
+        <div className="mb-14">
+          <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Adjunct Faculties</h2>
+          <p className="text-[#6B6860] text-[16px] mb-6">Affiliated faculty contributing to CCSRR research</p>
+          <div className="space-y-3">
+            {[
+              { name: "Dr. Margit Alt Murphy", title: "Associate Professor", dept: "University of Gothenburg", inst: "Sweden" },
+              { name: "Prof (Dr.) Coralie English", title: "Professor", dept: "Physiotherapy, School of Health Sciences", inst: "University of Newcastle, Australia" },
+              { name: "Dr. Sureshkumar Kamalakannan", title: "Associate Professor", dept: "Northumbria University, India Alliance Early Career Research Fellow, Deputy Director – Cochrane Affiliate, IIPH Hyderabad, Cochrane India Network", inst: "UK" },
+              { name: "Dr. Jeemon Panniyammakal", title: "Additional Professor (Epidemiology)", dept: "Sree Chitra Tirunal Institute for Medical Sciences and Technology", inst: "Trivandrum, India" },
+            ].map((person) => (
+              <div key={person.name} className="flex items-start gap-2 text-justify">
+                <div className="h-1.5 w-1.5 rounded-full bg-[#B84A18] shrink-0 mt-2" />
+                <div>
+                  <span className="text-[16px] text-[#4A4845] font-medium">{person.name}</span>
+                  <p className="text-[14px] text-[#6B6860]">
+                    {person.title}, {person.dept}, {person.inst}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Collaborators */}
         <div className="mb-14">
           <h2 className="font-display text-3xl text-[#1C1C1A] mb-1">Collaborators</h2>
