@@ -50,7 +50,7 @@ export default function MemberCard({ member }: MemberCardProps) {
                 alt={member.name}
                 width={96}
                 height={96}
-                className="shrink-0 h-24 w-24 rounded-full object-cover shadow-md mb-5"
+                className={`shrink-0 h-24 w-24 rounded-full object-cover shadow-md mb-5 ${member.imageZoom || ""}`}
                 style={member.imagePosition ? { objectPosition: member.imagePosition } : undefined}
               />
             ) : (

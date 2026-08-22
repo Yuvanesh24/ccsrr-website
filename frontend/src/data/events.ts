@@ -9,6 +9,7 @@ export interface Event {
   description: string;
   poster: string;
   isUpcoming: boolean;
+  joinLink?: string;
 }
 
 export const events: Event[] = [
@@ -241,5 +242,16 @@ export const events: Event[] = [
     description: "Why isn't evidence enough? Overcoming the translational gap in stroke rehabilitation. Speaker: Dr. John Solomon M, Coordinator, CCSRR, MAHE.",
     poster: "/CCSRR_Seminar_Poster_A3_v5_300dpi.png",
     isUpcoming: false,
+  },
+  {
+    id: "e24",
+    title: "CCSRR Decennial Lecture Series — Aphasia Rehabilitation: Insights from Indian Context",
+    type: "Lecture",
+    date: "24 Aug 2026",
+    venue: "Microsoft Teams (Online)",
+    description: "The Centre for Comprehensive Stroke Rehabilitation and Research (CCSRR), MAHE cordially invites you to the second lecture of its Decennial Lecture Series.\n\nSpeaker: Dr. Gopee Krishnan, Professor, Department of Speech and Hearing, MCHP, MAHE.",
+    poster: "/Dr_Gopee_Krishnan_Lecture_2_Poster.png",
+    isUpcoming: true,
+    joinLink: "https://teams.microsoft.com/meet/42647076954374?p=vyplVlA8eGRJdKiT4X",
   },
 ];

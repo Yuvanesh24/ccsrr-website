@@ -342,7 +342,7 @@ export const phdProjects: PhDProject[] = [
     studentName: "Farah",
     thesisTitle: "Predicting motor and functional recovery using Surface Electromyography (sEMG) in people with severe motor impairment after stroke",
     guide: "Dr. John Solomon M",
-    coGuide: "Dr. Senthil Kumaran D",
+    coGuide: "Dr. Senthil Kumaran D, Dr. Margit Alt Murphy",
     registrationYear: "2024 - ongoing",
     status: "Ongoing",
   },

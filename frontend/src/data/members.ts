@@ -14,6 +14,7 @@ export interface Member {
   email: string;
   linkedin?: string;
   imagePosition?: string;
+  imageZoom?: string;
   staticId?: string;
 }
 
@@ -318,6 +319,7 @@ export const members: Member[] = [
     name: "Mr. Siddharth Nitinbhai Savadia",
     photo: "/members/Siddharth.jpg",
     imagePosition: "center 50%",
+    imageZoom: "scale-[1.3]",
     designation: "PhD Scholar",
     qualification: "MPT",
     department: "Department of Physiotherapy, MCHP Manipal",
