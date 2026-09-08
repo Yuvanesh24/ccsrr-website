@@ -33,7 +33,7 @@ export default function MemberCard({ member }: MemberCardProps) {
         onClick={() => member.bio && setFlipped((prev) => !prev)}
       >
         {/* ── FRONT ── */}
-        <div className="[backface-visibility:hidden] absolute inset-0 bg-white hover:bg-[#EBE5DE] rounded-lg transition-colors duration-150 flex flex-col" style={{ borderTop: "3px solid #B84A18" }}>
+        <div className="[backface-visibility:hidden] relative w-full bg-white hover:bg-[#EBE5DE] rounded-lg transition-colors duration-150 flex flex-col overflow-hidden" style={{ borderTop: "3px solid #B84A18" }}>
 
           {member.bio && isHovered && !flipped && (
             <div className="absolute inset-x-0 top-0 bottom-14 z-10 flex items-center justify-center bg-white/70 rounded-lg pointer-events-none">
@@ -43,7 +43,7 @@ export default function MemberCard({ member }: MemberCardProps) {
             </div>
           )}
 
-          <div className="p-6 flex flex-col items-center text-center flex-1 pt-10">
+          <div className="p-6 flex flex-col items-center text-center flex-1 pt-10 w-full max-w-full min-w-0">
             {hasPhoto ? (
               <Image
                 src={member.photo}
@@ -81,10 +81,10 @@ export default function MemberCard({ member }: MemberCardProps) {
               <a
                 href={`mailto:${member.email}`}
                 onClick={(e) => e.stopPropagation()}
-                className="mt-5 pt-3 border-t border-[#F0EDE8] flex items-center gap-2 w-full justify-center"
+                className="mt-5 pt-3 border-t border-[#F0EDE8] flex items-start gap-2 w-full"
               >
-                <Mail className="h-4 w-4 shrink-0 text-[#B84A18]" />
-                <span className="text-[14px] text-[#6B6860] hover:text-[#B84A18] transition-colors truncate min-w-0 max-w-full">
+                <Mail className="h-4 w-4 shrink-0 text-[#B84A18] mt-0.5" />
+                <span className="text-[14px] text-[#6B6860] hover:text-[#B84A18] transition-colors break-all text-left leading-snug min-w-0">
                   {member.email}
                 </span>
               </a>
