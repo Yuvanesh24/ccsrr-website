@@ -145,6 +145,32 @@ export default async function HomePage() {
         </section>
       )}
 
+      {/* ── WORLD PHYSIOTHERAPY DAY 2026 ── */}
+      <section className="section-py" style={{ background: "#FAFAF8" }}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
+              Celebration
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">World Physiotherapy Day 2026</h2>
+            <p className="mt-3 text-[#6B6860] max-w-lg mx-auto text-[17px]">
+              Warm wishes from CCSRR to all physiotherapists
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <div className="max-w-2xl">
+              <Image
+                src="/World_Physiotherapy_Day_2026.jpeg"
+                alt="World Physiotherapy Day 2026"
+                width={1600}
+                height={1600}
+                className="w-full h-auto rounded-xl shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── RESEARCH UPDATES ── */}
       <section className="section-py" style={{ background: "#ffffff" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

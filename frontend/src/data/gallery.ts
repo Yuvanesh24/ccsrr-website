@@ -12,6 +12,13 @@ export interface GalleryItem {
 
 export const galleryItems: GalleryItem[] = [
   {
+    id: "g19",
+    title: "World Physiotherapy Day 2026",
+    image: "/World_Physiotherapy_Day_2026.jpeg",
+    category: "Events",
+    description: "Warm wishes from CCSRR to all physiotherapists on World Physiotherapy Day 2026.",
+  },
+  {
     id: "g1",
     title: "Stroke Camp 2017",
     image: "/gallery/stroke-camp-2017-1.jpg",
