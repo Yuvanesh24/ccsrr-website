@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getEvents } from "@/lib/api";
 import EventCard from "@/components/EventCard";
 import SectionHeading from "@/components/SectionHeading";
+import DecennialLectureCard from "@/components/DecennialLectureCard";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -26,7 +27,7 @@ export default async function EventsPage() {
         const year = parseInt(match[3]);
         return year * 10000 + month * 100 + day;
       };
-      return parseDate(a.date) - parseDate(b.date);
+      return parseDate(b.date) - parseDate(a.date);
     });
   const nonDecennial = events.filter((e) => !e.title.includes("Decennial Lecture Series"));
   const upcoming = nonDecennial.filter((e) => e.isUpcoming);
@@ -65,7 +66,7 @@ export default async function EventsPage() {
             <h2 className="font-display text-3xl text-[#1C1C1A] mb-6">Decennial Lecture Series</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
               {decennial.map((event) => (
-                <EventCard key={event.id} event={event} />
+                <DecennialLectureCard key={event.id} event={event} />
               ))}
             </div>
           </section>

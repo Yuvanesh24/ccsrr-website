@@ -10,6 +10,9 @@ export interface Event {
   poster: string;
   isUpcoming: boolean;
   joinLink?: string;
+  lectureNumber?: number;
+  speakerName?: string;
+  speakerDept?: string;
 }
 
 export const events: Event[] = [
@@ -235,13 +238,16 @@ export const events: Event[] = [
   },
   {
     id: "e23",
-    title: "CCSRR Decennial Lecture Series — Inaugural Lecture",
+    title: "CCSRR Decennial Lecture Series — Why Isn't Evidence Enough? Overcoming the Translational Gap in Stroke Rehabilitation",
     type: "Lecture",
     date: "22 Jul 2026",
     venue: "Microsoft Teams (Online)",
     description: "Why isn't evidence enough? Overcoming the translational gap in stroke rehabilitation. Speaker: Dr. John Solomon M, Coordinator, CCSRR, MAHE.",
     poster: "/CCSRR_Seminar_Poster_A3_v5_300dpi.png",
     isUpcoming: false,
+    lectureNumber: 1,
+    speakerName: "Dr. John Solomon M",
+    speakerDept: "Coordinator, CCSRR, MAHE",
   },
   {
     id: "e24",
@@ -253,6 +259,9 @@ export const events: Event[] = [
     poster: "/Dr_Gopee_Krishnan_Lecture_2_Poster.png",
     isUpcoming: false,
     joinLink: "https://teams.microsoft.com/meet/42647076954374?p=vyplVlA8eGRJdKiT4X",
+    lectureNumber: 2,
+    speakerName: "Dr. Gopee Krishnan",
+    speakerDept: "Professor, Department of Speech and Hearing, MCHP, MAHE",
   },
   {
     id: "e25",
@@ -264,5 +273,8 @@ export const events: Event[] = [
     poster: "/Dr_Pradeepa_Nayak_Lecture_3_Poster.jpeg",
     isUpcoming: false,
     joinLink: "https://teams.microsoft.com/meet/493301180097167?p=U1SRiZAX7ihZWHwGsu",
+    lectureNumber: 3,
+    speakerName: "Dr. Pradeepa Nayak",
+    speakerDept: "Senior Lecturer, Faculty of Health and Education, Manchester Metropolitan University, UK",
   },
 ];

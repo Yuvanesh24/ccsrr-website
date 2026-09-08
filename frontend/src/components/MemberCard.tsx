@@ -84,7 +84,7 @@ export default function MemberCard({ member }: MemberCardProps) {
                 className="mt-5 pt-3 border-t border-[#F0EDE8] flex items-center gap-2 w-full justify-center"
               >
                 <Mail className="h-4 w-4 shrink-0 text-[#B84A18]" />
-                <span className="text-[14px] text-[#6B6860] hover:text-[#B84A18] transition-colors truncate">
+                <span className="text-[14px] text-[#6B6860] hover:text-[#B84A18] transition-colors truncate min-w-0 max-w-full">
                   {member.email}
                 </span>
               </a>
