@@ -408,7 +408,7 @@ export const members: Member[] = [
     name: "Ms. Nidhi Misalankar",
     photo: "/members/nidhi.jpg",
     imagePosition: "center 150%",
-    designation: "Research Scientist",
+    designation: "PhD Scholar",
     qualification: "MPT",
     department: "Department of Physiotherapy, MCHP Manipal",
     category: "Clinical Collaborator",

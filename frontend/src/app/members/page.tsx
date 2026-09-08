@@ -65,7 +65,7 @@ export default async function MembersPage() {
       const order = [
         "Subramanian", "Intiaz", "Sanya", "Dorcas", "Nistara",
         "Aparna", "Siddharth", "Tancia", "Farah", "Akshay",
-        "Megha", "Karthi", "Akhila", "Nidhi", "Yuvanesh",
+        "Megha", "Karthi", "Nidhi", "Akhila", "Yuvanesh",
       ];
       const aIdx = order.findIndex((o) => a.name.toLowerCase().includes(o.toLowerCase()));
       const bIdx = order.findIndex((o) => b.name.toLowerCase().includes(o.toLowerCase()));
