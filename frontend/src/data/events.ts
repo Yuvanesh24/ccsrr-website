@@ -277,4 +277,14 @@ export const events: Event[] = [
     speakerName: "Dr. Pradeepa Nayak",
     speakerDept: "Senior Lecturer, Faculty of Health and Education, Manchester Metropolitan University, UK",
   },
+  {
+    id: "e26",
+    title: "World Physiotherapy Day 2026",
+    type: "Other",
+    date: "8 Sep 2026",
+    venue: "MAHE, Manipal",
+    description: "Warm wishes from CCSRR to all physiotherapists on World Physiotherapy Day 2026. We salute the dedication and compassion of physiotherapists worldwide in transforming lives through rehabilitation.",
+    poster: "/World_Physiotherapy_Day_2026.jpeg",
+    isUpcoming: false,
+  },
 ];
