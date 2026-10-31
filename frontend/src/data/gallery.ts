@@ -38,7 +38,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "g21",
-    title: "Decennial Lecture series 4 on the occasion of World stroke day 2026",
+    title: "Decennial Lecture series 4 on the occasion of World Stroke Day 2026",
     image: "/gallery/decennial-lecture-4-world-stroke-day-2026/stroke-day-2026-01.jpg",
     images: [
       "/gallery/decennial-lecture-4-world-stroke-day-2026/stroke-day-2026-01.jpg",
@@ -52,7 +52,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "g24",
-    title: "Decennial Lecture Series 3 on the occasion of World Physiotherapy day 2026",
+    title: "Decennial Lecture Series 3 on the occasion of World Physiotherapy Day 2026",
     image: "/gallery/decennial-lecture-series-3/lecture-3-01.jpg",
     images: [
       "/gallery/decennial-lecture-series-3/lecture-3-01.jpg",
@@ -65,7 +65,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "g23",
-    title: "Decennial Lecture Series 2 (2026)",
+    title: "Decennial Lecture Series 2 2026",
     image: "/gallery/decennial-lecture-series-2/lecture-2-01.jpg",
     images: [
       "/gallery/decennial-lecture-series-2/lecture-2-01.jpg",
@@ -78,7 +78,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: "g22",
-    title: "Decennial Lecture Series 1 (2026)",
+    title: "Decennial Lecture Series 1 2026",
     image: "/gallery/decennial-lecture-series-1/lecture-1-01.jpg",
     images: [
       "/gallery/decennial-lecture-series-1/lecture-1-01.jpg",
