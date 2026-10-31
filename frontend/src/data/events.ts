@@ -291,7 +291,7 @@ export const events: Event[] = [
     id: "e27",
     title: "CCSRR Decennial Lecture Series — Facilitating Mobility Early After Stroke",
     type: "Lecture",
-    date: "29 Oct 2026 · 6:00 – 7:00 PM IST",
+    date: "29 Oct 2026",
     venue: "Microsoft Teams (Online)",
     description: "The Centre for Comprehensive Stroke Rehabilitation and Research (CCSRR) and the Department of Physiotherapy, MCHP, MAHE, cordially invite you to the fourth lecture of the Decennial Lecture Series, held on the occasion of World Stroke Day 2026.\n\nSpeaker: Dr. Karthik Babu, Principal, KMCH College of Physiotherapy, Coimbatore, Tamil Nadu, India.\n\nJoin the session: https://tinyurl.com/3zak9m7f\nMeeting ID: 459 894 176 191 325\nPasscode: Ke3uh7qG",
     poster: "/Dr_Karthik_Babu_Lecture_4_Poster.jpeg",
