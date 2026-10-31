@@ -46,7 +46,7 @@ export default function DecennialLectureCard({ event }: { event: Event }) {
             </p>
             <p className="text-[#6B6860]">{event.speakerDept}</p>
           </div>
-          <div className="flex items-center gap-4 mt-4 pt-4 border-t border-[#F0EDE8] text-[13px] text-[#6B6860]">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-4 pt-4 border-t border-[#F0EDE8] text-[13px] text-[#6B6860]">
             <span className="flex items-center gap-1.5"><Calendar className="h-3.5 w-3.5" /> {event.date}</span>
             <span className="flex items-center gap-1.5"><MapPin className="h-3.5 w-3.5" /> {event.venue}</span>
           </div>
