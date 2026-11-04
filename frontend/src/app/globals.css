@@ -135,3 +135,36 @@
 .hero-cta-primary:hover {
   background: #963C14;
 }
+
+/* ── Announcement marquee ── */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.marquee-bar {
+  background: linear-gradient(90deg, #4A1C08 0%, #7A3010 50%, #4A1C08 100%);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.marquee-bar:hover .marquee-track,
+.marquee-bar:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    width: 100%;
+    justify-content: center;
+  }
+  .marquee-copy[aria-hidden="true"] {
+    display: none;
+  }
+}

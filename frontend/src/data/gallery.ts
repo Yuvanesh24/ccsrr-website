@@ -277,3 +277,4 @@ export const galleryItems: GalleryItem[] = [
 ];
 
 export const galleryCategories: GalleryCategory[] = ["Events", "Workshops"];
+

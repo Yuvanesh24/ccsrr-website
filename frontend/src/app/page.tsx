@@ -9,6 +9,7 @@ import { partnerLogos } from "@/data/collaborations";
 import ProjectCard from "@/components/ProjectCard";
 import EventCard from "@/components/EventCard";
 import MemberCard from "@/components/MemberCard";
+import SymposiumBrochure from "@/components/SymposiumBrochure";
 
 export default async function HomePage() {
   const [{ fundedProjects, phdProjects, studentProjects }, events, members, publications] =
@@ -19,6 +20,97 @@ export default async function HomePage() {
   const featuredProjects = [...fundedProjects, ...phdProjects].slice(0, 3);
   return (
     <>
+      {/* ── ANNOUNCEMENT MARQUEE ── */}
+      <a
+        href="#symposium-2026-poster"
+        className="marquee-bar group relative block overflow-hidden border-b border-white/10"
+        aria-label="Registrations open for National Stroke Symposium 2026 — Call for Abstract Submissions open"
+      >
+        <div className="marquee-track py-2.5">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="marquee-copy flex shrink-0 items-center" aria-hidden={copy === 1}>
+              {[
+                "Registrations open for National Stroke Symposium 2026",
+                "Call for Abstract Submissions open",
+              ].map((text) => (
+                <span key={text} className="flex items-center">
+                  <span className="px-6 text-[13px] sm:text-sm font-semibold uppercase tracking-[0.14em] text-[#FBD9BF] whitespace-nowrap group-hover:text-white transition-colors">
+                    {text}
+                  </span>
+                  <span className="text-[#F4A87A] text-[11px] leading-none">✦</span>
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </a>
+
+      {/* ── NATIONAL STROKE SYMPOSIUM 2026 ── */}
+      <section id="symposium-2026" className="scroll-mt-24" style={{ background: "#FAFAF8" }}>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14">
+          <div className="text-center mb-8 sm:mb-10">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
+              Announcement
+            </p>
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-[#1C1C1A]">
+              National Stroke Symposium 2026
+            </h2>
+            <p className="mt-3 text-[#6B6860] text-[15px] sm:text-[16px] leading-relaxed">
+              19th &amp; 20th December 2026 · Sharada Hall, Manipal College of Health Professions, MAHE, Manipal
+            </p>
+            <p className="mt-1 text-[#8A867E] text-[13px]">
+              Tap any page to read it larger
+            </p>
+          </div>
+
+          <SymposiumBrochure />
+
+          <div id="symposium-2026-poster" className="scroll-mt-24 pt-12 sm:pt-16 pb-12 sm:pb-16 text-center">
+            <a
+              href="https://forms.gle/g9L1DWpLHeTT4Fnv6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-block"
+              aria-label="Register for the National Stroke Symposium 2026"
+            >
+              <Image
+                src="/symposium/stroke-symposium-2026-poster.jpeg"
+                alt="National Stroke Symposium 2026 poster"
+                width={905}
+                height={1280}
+                className="w-full max-w-[640px] h-auto rounded-xl shadow-lg transition-shadow group-hover:shadow-2xl"
+              />
+            </a>
+
+            <div className="mt-7 flex flex-wrap justify-center gap-3">
+              <a
+                href="https://forms.gle/g9L1DWpLHeTT4Fnv6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hero-cta-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition-colors"
+              >
+                Register Now <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href="https://forms.gle/wY3pgFD9hSGxT8Vw6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm border border-[#B84A18]/30 text-[#B84A18] hover:bg-[#FBF0E8] transition-colors"
+              >
+                Submit Abstract <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+
+            <p className="mt-5 text-[13px] text-[#8A867E]">
+              Last date for abstract submission: 20th November 2026 · Email:{" "}
+              <a href="mailto:ccsrr.mchp@manipal.edu" className="text-[#B84A18] hover:underline">
+                ccsrr.mchp@manipal.edu
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* ── HERO ── */}
       <section
         className="relative overflow-hidden text-white"
