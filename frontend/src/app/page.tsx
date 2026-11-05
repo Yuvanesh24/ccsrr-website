@@ -76,8 +76,8 @@ export default async function HomePage() {
               <Image
                 src="/symposium/stroke-symposium-2026-poster.jpeg"
                 alt="National Stroke Symposium 2026 poster"
-                width={905}
-                height={1280}
+                width={1759}
+                height={2485}
                 className="w-full max-w-[640px] h-auto rounded-xl shadow-lg transition-shadow group-hover:shadow-2xl"
               />
             </a>
