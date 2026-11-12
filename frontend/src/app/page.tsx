@@ -67,29 +67,21 @@ export default async function HomePage() {
 
           <div id="symposium-2026-poster" className="scroll-mt-24 pt-12 sm:pt-16 pb-12 sm:pb-16 text-center">
             <div className="group relative inline-block w-full max-w-[640px]">
-              <a
-                href="https://forms.gle/g9L1DWpLHeTT4Fnv6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block"
-                aria-label="Register for the National Stroke Symposium 2026"
-              >
-                <Image
-                  src="/symposium/stroke-symposium-2026-poster.jpeg"
-                  alt="National Stroke Symposium 2026 poster"
-                  width={1800}
-                  height={2544}
-                  className="w-full h-auto rounded-xl shadow-lg transition-shadow group-hover:shadow-2xl"
-                />
-              </a>
+              <Image
+                src="/symposium/stroke-symposium-2026-poster.jpeg"
+                alt="National Stroke Symposium 2026 poster"
+                width={1800}
+                height={2544}
+                className="w-full h-auto rounded-xl shadow-lg transition-shadow group-hover:shadow-2xl"
+              />
 
               {/* Tap targets over the poster's QR codes / links, so each opens its own form */}
               <a
                 href="https://forms.gle/wY3pgFD9hSGxT8Vw6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute z-10 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B84A18] focus-visible:ring-offset-2"
-                style={{ left: "10.5%", top: "77.8%", width: "37.5%", height: "14%" }}
+                className="absolute z-10 cursor-pointer rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B84A18] focus-visible:ring-offset-2"
+                style={{ left: "10%", top: "77%", width: "39%", height: "15%" }}
                 aria-label="Submit an abstract for the National Stroke Symposium 2026"
                 title="Submit Abstract"
               />
@@ -97,8 +89,8 @@ export default async function HomePage() {
                 href="https://forms.gle/g9L1DWpLHeTT4Fnv6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="absolute z-10 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B84A18] focus-visible:ring-offset-2"
-                style={{ left: "50.4%", top: "77.8%", width: "43.2%", height: "14%" }}
+                className="absolute z-10 cursor-pointer rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B84A18] focus-visible:ring-offset-2"
+                style={{ left: "50%", top: "77%", width: "44%", height: "15%" }}
                 aria-label="Register for the National Stroke Symposium 2026"
                 title="Register"
               />
