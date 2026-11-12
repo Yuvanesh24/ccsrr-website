@@ -89,7 +89,7 @@ export default async function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute z-10 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B84A18] focus-visible:ring-offset-2"
-                style={{ left: "10.5%", top: "78%", width: "36.5%", height: "11.4%" }}
+                style={{ left: "10.5%", top: "77.8%", width: "37.5%", height: "14%" }}
                 aria-label="Submit an abstract for the National Stroke Symposium 2026"
                 title="Submit Abstract"
               />
@@ -98,7 +98,7 @@ export default async function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="absolute z-10 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B84A18] focus-visible:ring-offset-2"
-                style={{ left: "50.4%", top: "78%", width: "43.2%", height: "11.4%" }}
+                style={{ left: "50.4%", top: "77.8%", width: "43.2%", height: "14%" }}
                 aria-label="Register for the National Stroke Symposium 2026"
                 title="Register"
               />
