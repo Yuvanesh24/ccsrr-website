@@ -116,7 +116,7 @@ export default async function HomePage() {
             </div>
 
             <p className="mt-5 text-[13px] text-[#8A867E]">
-              Last date for abstract submission: 20th November 2026 · Email:{" "}
+              Last date for abstract submission: 26th November 2026 · Email:{" "}
               <a href="mailto:ccsrr.mchp@manipal.edu" className="text-[#B84A18] hover:underline">
                 ccsrr.mchp@manipal.edu
               </a>
