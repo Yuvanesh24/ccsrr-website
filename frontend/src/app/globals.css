@@ -243,42 +243,6 @@
   background: #831023;
 }
 
-/* Homepage header matches the hero background */
-.home-header {
-  background: linear-gradient(135deg, #5a0e1c 0%, #7c1526 45%, #3a0a12 100%) !important;
-  border-bottom-color: rgba(255, 255, 255, 0.14) !important;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18) !important;
-}
-.home-header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-.home-header .home-header-logo {
-  filter: brightness(0) invert(1);
-}
-.home-header .home-header-link,
-.home-header .home-header-icon {
-  color: rgba(255, 255, 255, 0.86);
-}
-.home-header .home-header-link:hover,
-.home-header .home-header-icon:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.12);
-}
-.home-header .home-header-link-active {
-  color: #ffc9a8;
-  background: rgba(255, 255, 255, 0.14);
-}
-.home-header-menu {
-  background: #5a0e1c !important;
-  border-top-color: rgba(255, 255, 255, 0.14) !important;
-}
-
 .christmas-snow {
   position: fixed;
   inset: 0;
