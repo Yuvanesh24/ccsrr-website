@@ -51,34 +51,33 @@ export default async function GalleryPage() {
   const otherItems = galleryItems.filter((item) => !isDecennial(item) && !isPoster(item));
 
   return (
-    <div className="py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* ── DECENNIAL CELEBRATION ── */}
-        <section
-          id="decennial-celebration"
-          className="relative mb-16 overflow-hidden rounded-3xl border border-[#E7C77A]/40 px-4 py-12 sm:px-10 sm:py-16"
-          style={{ background: "radial-gradient(circle at 50% -10%, #8E1B2E 0%, #5A0E1C 40%, #2C0710 100%)" }}
-        >
-          <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-            {confetti.map((dot, i) => (
-              <span
-                key={i}
-                className="absolute rounded-full opacity-70"
-                style={{
-                  left: dot.left,
-                  top: dot.top,
-                  width: dot.size,
-                  height: dot.size,
-                  background: dot.color,
-                  boxShadow: `0 0 12px ${dot.color}`,
-                }}
-              />
-            ))}
-            <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#E7C77A]/60 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E7C77A]/60 to-transparent" />
-          </div>
+    <div className="pb-16">
+      {/* ── DECENNIAL CELEBRATION — red theme fills the page down to the Gallery heading ── */}
+      <section
+        id="decennial-celebration"
+        className="relative overflow-hidden"
+        style={{ background: "radial-gradient(circle at 50% 0%, #8E1B2E 0%, #5A0E1C 42%, #2C0710 100%)" }}
+      >
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          {confetti.map((dot, i) => (
+            <span
+              key={i}
+              className="absolute rounded-full opacity-70"
+              style={{
+                left: dot.left,
+                top: dot.top,
+                width: dot.size,
+                height: dot.size,
+                background: dot.color,
+                boxShadow: `0 0 12px ${dot.color}`,
+              }}
+            />
+          ))}
+          <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E7C77A]/60 to-transparent" />
+        </div>
 
-          <div className="relative mx-auto max-w-4xl text-center">
+        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+          <div className="mx-auto max-w-4xl text-center">
             <div
               aria-hidden="true"
               className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-full border border-[#E7C77A]/70 bg-[#E7C77A]/10"
@@ -101,36 +100,45 @@ export default async function GalleryPage() {
             <div className="mx-auto mt-5 h-px w-32 bg-gradient-to-r from-transparent via-[#E7C77A] to-transparent" />
           </div>
 
-          <div className="relative mx-auto mt-10 max-w-3xl">
-            <a
-              href={POSTER_SRC}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative block overflow-hidden rounded-2xl border border-[#E7C77A]/50 shadow-2xl"
-            >
-              <Image
-                src={POSTER_SRC}
-                alt="Decennial Celebration of CCSRR poster"
-                width={1600}
-                height={1600}
-                className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
-              />
-              <span className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/55 px-4 py-1.5 text-xs font-medium text-white/90 opacity-0 transition-opacity group-hover:opacity-100">
-                Click to view the full poster
-              </span>
-            </a>
+          {/* Posters — arranged as cards so more posters/sections can be added here later */}
+          <div className="mt-12">
+            <h3 className="text-center font-display text-2xl text-[#F7E3B0] sm:text-3xl">Posters</h3>
+            <div className="mt-6 grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              <a
+                href={POSTER_SRC}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block w-full max-w-[220px] text-center"
+              >
+                <div className="overflow-hidden rounded-xl border border-[#E7C77A]/50 shadow-xl">
+                  <Image
+                    src={POSTER_SRC}
+                    alt="Decennial Celebration of CCSRR poster"
+                    width={1600}
+                    height={1600}
+                    className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+                <p className="mt-3 text-sm font-medium leading-snug text-[#FFF4DC]">
+                  Decennial Celebration of CCSRR
+                </p>
+                <p className="mt-1 text-xs text-[#F0C97A]">Click to view full poster</p>
+              </a>
+            </div>
           </div>
 
           {celebrationItems.length > 0 && (
-            <div className="relative mt-14 rounded-2xl border border-[#E7C77A]/25 bg-[#FFF9F2]/95 p-4 sm:p-6">
-              <h3 className="mb-5 text-center font-display text-2xl text-[#5A0E1C] sm:text-3xl">
+            <div className="mt-14">
+              <h3 className="mb-6 text-center font-display text-2xl text-[#F7E3B0] sm:text-3xl">
                 Decennial Celebration Photos
               </h3>
               <GalleryGrid items={celebrationItems} showFilters={false} />
             </div>
           )}
-        </section>
+        </div>
+      </section>
 
+      <div className="mx-auto max-w-7xl px-4 pt-16 sm:px-6 lg:px-8">
         <SectionHeading title="Gallery" subtitle="Photos from events and workshops" eyebrow="Moments" />
         <GalleryGrid items={otherItems} />
       </div>
