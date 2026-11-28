@@ -7,6 +7,7 @@ import { galleryCategories } from "@/data/gallery";
 
 interface GalleryGridProps {
   items: GalleryItem[];
+  showFilters?: boolean;
 }
 
 function ImageCarousel({ item, onOpen }: { item: GalleryItem; onOpen: (index: number) => void }) {
@@ -81,7 +82,7 @@ function ImageCarousel({ item, onOpen }: { item: GalleryItem; onOpen: (index: nu
   );
 }
 
-export default function GalleryGrid({ items }: GalleryGridProps) {
+export default function GalleryGrid({ items, showFilters = true }: GalleryGridProps) {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   const [lightbox, setLightbox] = useState<{ item: GalleryItem; imageIndex: number } | null>(null);
   const [videoUrl, setVideoUrl] = useState<string | null>(null);
@@ -126,31 +127,33 @@ export default function GalleryGrid({ items }: GalleryGridProps) {
 
   return (
     <>
-      <div className="flex flex-wrap gap-2 mb-6">
-        <button
-          onClick={() => setActiveCategory("All")}
-          className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-            activeCategory === "All"
-              ? "bg-[#B84A18] text-white"
-              : "bg-[#EBE5DE] text-[#6B6860] hover:bg-[#DDD5CC]"
-          }`}
-        >
-          All
-        </button>
-        {galleryCategories.map((cat) => (
+      {showFilters && (
+        <div className="flex flex-wrap gap-2 mb-6">
           <button
-            key={cat}
-            onClick={() => setActiveCategory(cat)}
+            onClick={() => setActiveCategory("All")}
             className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
-              activeCategory === cat
+              activeCategory === "All"
                 ? "bg-[#B84A18] text-white"
                 : "bg-[#EBE5DE] text-[#6B6860] hover:bg-[#DDD5CC]"
             }`}
           >
-            {cat}
+            All
           </button>
-        ))}
-      </div>
+          {galleryCategories.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setActiveCategory(cat)}
+              className={`px-4 py-1.5 rounded-full text-sm font-medium transition-colors ${
+                activeCategory === cat
+                  ? "bg-[#B84A18] text-white"
+                  : "bg-[#EBE5DE] text-[#6B6860] hover:bg-[#DDD5CC]"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+      )}
 
       {filtered.length === 0 ? (
         <div className="text-center py-16 text-[#6B6860]">

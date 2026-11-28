@@ -249,29 +249,6 @@ export default async function HomePage() {
         </section>
       )}
 
-      {/* ── DECENNIAL CELEBRATION OF CCSRR ── */}
-      <section className="section-py" style={{ background: "#FAFAF8" }}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
-              Celebration
-            </p>
-            <h2 className="font-display text-4xl md:text-5xl text-[#1C1C1A]">Decennial Celebration of CCSRR</h2>
-          </div>
-          <div className="flex justify-center">
-            <div className="max-w-2xl">
-              <Image
-                src="/Decennial_Celebration_of_CCSRR.jpeg"
-                alt="Decennial Celebration of CCSRR"
-                width={1600}
-                height={1600}
-                className="w-full h-auto rounded-xl shadow-lg"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ── RESEARCH UPDATES ── */}
       <section className="section-py" style={{ background: "#ffffff" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
