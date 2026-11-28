@@ -10,6 +10,7 @@ import ProjectCard from "@/components/ProjectCard";
 import EventCard from "@/components/EventCard";
 import MemberCard from "@/components/MemberCard";
 import SymposiumBrochure from "@/components/SymposiumBrochure";
+import SymposiumSpeakers from "@/components/SymposiumSpeakers";
 
 export default async function HomePage() {
   const [{ fundedProjects, phdProjects, studentProjects }, events, members, publications] =
@@ -62,6 +63,8 @@ export default async function HomePage() {
               Tap any page to read it larger
             </p>
           </div>
+
+          <SymposiumSpeakers />
 
           <SymposiumBrochure />
 
