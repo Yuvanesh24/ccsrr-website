@@ -13,7 +13,7 @@ function snowflakes() {
       style: {
         "--left": `${(random() * 100).toFixed(2)}%`,
         "--size": `${size.toFixed(2)}px`,
-        "--delay": `${(-random() * 18).toFixed(2)}s`,
+        "--delay": `${(random() * 3).toFixed(2)}s`,
         "--duration": `${(9 + random() * 11).toFixed(2)}s`,
         "--drift": `${(random() * 90 - 45).toFixed(1)}px`,
         "--opacity": (0.35 + random() * 0.5).toFixed(2),
