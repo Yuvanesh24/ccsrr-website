@@ -18,6 +18,13 @@ export const metadata: Metadata = {
 
 const POSTER_SRC = "/Decennial_Celebration_of_CCSRR.jpeg";
 
+const LECTURE_COVERS: Record<number, string> = {
+  1: "/gallery/decennial-celebration/lecture-1-cover.jpeg",
+  2: "/gallery/decennial-celebration/lecture-2-cover.jpeg",
+  3: "/gallery/decennial-celebration/lecture-3-cover.jpeg",
+  4: "/gallery/decennial-celebration/lecture-4-cover.jpeg",
+};
+
 const confetti = [
   { left: "5%", top: "16%", size: 7, color: "#F6D98E" },
   { left: "13%", top: "72%", size: 5, color: "#E9B95F" },
@@ -39,6 +46,14 @@ function isDecennial(item: GalleryItem) {
   return /decennial/i.test(item.title);
 }
 
+function withLectureCover(item: GalleryItem): GalleryItem {
+  const match = item.title.match(/lecture(?:\s+series)?\s*(\d)/i);
+  const cover = match ? LECTURE_COVERS[Number(match[1])] : undefined;
+  if (!cover) return item;
+  const photos = item.images ?? [item.image];
+  return { ...item, image: cover, images: [cover, ...photos.filter((src) => src !== cover)] };
+}
+
 export default async function GalleryPage() {
   const galleryItems = await getGalleryItems();
   galleryItems.sort((a, b) => {
@@ -47,7 +62,9 @@ export default async function GalleryPage() {
     return bYear - aYear;
   });
 
-  const celebrationItems = galleryItems.filter((item) => isDecennial(item) && !isPoster(item));
+  const celebrationItems = galleryItems
+    .filter((item) => isDecennial(item) && !isPoster(item))
+    .map(withLectureCover);
   const otherItems = galleryItems.filter((item) => !isDecennial(item) && !isPoster(item));
 
   return (

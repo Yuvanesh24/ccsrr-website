@@ -12,36 +12,18 @@ interface GalleryGridProps {
 
 function ImageCarousel({ item, onOpen }: { item: GalleryItem; onOpen: (index: number) => void }) {
   const [idx, setIdx] = useState(0);
-  const [paused, setPaused] = useState(false);
-  const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const images = item.images ?? [item.image];
 
-  useEffect(() => {
-    if (paused || images.length <= 1) return;
-    timer.current = setInterval(() => {
-      setIdx((prev) => (prev + 1) % images.length);
-    }, 4000);
-    return () => {
-      if (timer.current) clearInterval(timer.current);
-    };
-  }, [paused, images.length]);
-
   const prev = () => {
     setIdx((prev) => (prev - 1 + images.length) % images.length);
-    setPaused(true);
   };
   const next = () => {
     setIdx((prev) => (prev + 1) % images.length);
-    setPaused(true);
   };
 
   return (
-    <div
-      className="absolute inset-0"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-    >
+    <div className="absolute inset-0">
       <div className="absolute inset-0 cursor-pointer" onClick={() => onOpen(idx)}>
         {images.map((src, i) => (
           <div
@@ -71,7 +53,7 @@ function ImageCarousel({ item, onOpen }: { item: GalleryItem; onOpen: (index: nu
             {images.map((_, i) => (
               <button
                 key={i}
-                onClick={(e) => { e.stopPropagation(); setIdx(i); setPaused(true); }}
+                onClick={(e) => { e.stopPropagation(); setIdx(i); }}
                 className={`w-2 h-2 rounded-full transition-colors ${i === idx ? "bg-white" : "bg-white/50"}`}
               />
             ))}
