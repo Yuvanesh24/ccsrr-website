@@ -11,6 +11,7 @@ import EventCard from "@/components/EventCard";
 import MemberCard from "@/components/MemberCard";
 import SymposiumBrochure from "@/components/SymposiumBrochure";
 import SymposiumSpeakers from "@/components/SymposiumSpeakers";
+import SymposiumPopBlast from "@/components/SymposiumPopBlast";
 
 export default async function HomePage() {
   const [{ fundedProjects, phdProjects, studentProjects }, events, members, publications] =
@@ -49,7 +50,8 @@ export default async function HomePage() {
       {/* ── NATIONAL STROKE SYMPOSIUM 2026 ── */}
       <section id="symposium-2026" className="scroll-mt-24" style={{ background: "#FAFAF8" }}>
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14">
-          <div className="text-center mb-8 sm:mb-10">
+          <div className="relative text-center mb-8 sm:mb-10">
+            <SymposiumPopBlast />
             <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-[#B84A18] mb-3">
               Announcement
             </p>

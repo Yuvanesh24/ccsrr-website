@@ -168,3 +168,50 @@
     display: none;
   }
 }
+
+/* ── Symposium opening pop blast ── */
+.pop-blast {
+  position: absolute;
+  top: 50%;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  z-index: 5;
+}
+.pop-blast-left {
+  left: 3%;
+}
+.pop-blast-right {
+  right: 3%;
+}
+
+.pop-particle {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  animation: pop-blast-out 900ms cubic-bezier(0.16, 0.8, 0.3, 1) both;
+  animation-delay: var(--delay);
+  box-shadow: 0 0 6px rgba(184, 74, 24, 0.25);
+}
+
+@keyframes pop-blast-out {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translate(calc(-50% + var(--mid-x)), calc(-50% + var(--mid-y))) scale(1.4);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(-50% + var(--end-x)), calc(-50% + var(--end-y))) scale(0.3);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pop-blast {
+    display: none;
+  }
+}
