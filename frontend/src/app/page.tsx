@@ -64,6 +64,25 @@ export default async function HomePage() {
             </p>
           </div>
 
+          <div className="mb-8 sm:mb-10 flex flex-wrap justify-center gap-3">
+            <a
+              href="https://forms.gle/g9L1DWpLHeTT4Fnv6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-cta-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition-colors"
+            >
+              Register Now <ArrowRight className="h-4 w-4" />
+            </a>
+            <a
+              href="https://forms.gle/wY3pgFD9hSGxT8Vw6"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm border border-[#B84A18]/30 text-[#B84A18] hover:bg-[#FBF0E8] transition-colors"
+            >
+              Submit Abstract <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
+
           <SymposiumSpeakers />
 
           <SymposiumBrochure />
@@ -97,25 +116,6 @@ export default async function HomePage() {
                 aria-label="Register for the National Stroke Symposium 2026"
                 title="Register"
               />
-            </div>
-
-            <div className="mt-7 flex flex-wrap justify-center gap-3">
-              <a
-                href="https://forms.gle/g9L1DWpLHeTT4Fnv6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hero-cta-primary inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm shadow-lg transition-colors"
-              >
-                Register Now <ArrowRight className="h-4 w-4" />
-              </a>
-              <a
-                href="https://forms.gle/wY3pgFD9hSGxT8Vw6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm border border-[#B84A18]/30 text-[#B84A18] hover:bg-[#FBF0E8] transition-colors"
-              >
-                Submit Abstract <ArrowRight className="h-4 w-4" />
-              </a>
             </div>
 
             <p className="mt-5 text-[13px] text-[#8A867E]">
