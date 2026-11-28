@@ -34,7 +34,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16 md:h-24">
           <Link href="/" className="shrink-0 flex items-center h-full -ml-3 sm:-ml-6">
             <img
-              src="/ccsrr-logo.png"
+              src={isHome ? "/ccsrr-logo-home.png" : "/ccsrr-logo.png"}
               alt="Centre for Comprehensive Stroke Rehabilitation & Research"
               className="home-header-logo h-16 md:h-24 w-auto object-contain"
             />
