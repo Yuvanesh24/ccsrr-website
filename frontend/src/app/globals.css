@@ -243,6 +243,33 @@
   background: #831023;
 }
 
+/* Homepage header matches the hero background */
+.home-header {
+  background: linear-gradient(135deg, #5a0e1c 0%, #7c1526 45%, #3a0a12 100%) !important;
+  border-bottom-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18) !important;
+}
+.home-header .home-header-logo {
+  filter: brightness(0) invert(1);
+}
+.home-header .home-header-link,
+.home-header .home-header-icon {
+  color: rgba(255, 255, 255, 0.86);
+}
+.home-header .home-header-link:hover,
+.home-header .home-header-icon:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+.home-header .home-header-link-active {
+  color: #ffc9a8;
+  background: rgba(255, 255, 255, 0.14);
+}
+.home-header-menu {
+  background: #5a0e1c !important;
+  border-top-color: rgba(255, 255, 255, 0.14) !important;
+}
+
 .christmas-snow {
   position: fixed;
   inset: 0;
