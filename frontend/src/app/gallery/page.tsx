@@ -130,7 +130,7 @@ export default async function GalleryPage() {
           {celebrationItems.length > 0 && (
             <div className="mt-14">
               <h3 className="mb-6 text-center font-display text-2xl text-[#F7E3B0] sm:text-3xl">
-                Decennial Celebration Photos
+                Decennial Celebration Lectures
               </h3>
               <GalleryGrid items={celebrationItems} showFilters={false} />
             </div>
