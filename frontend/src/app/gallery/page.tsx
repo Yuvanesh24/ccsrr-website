@@ -76,7 +76,7 @@ export default async function GalleryPage() {
           <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-[#E7C77A]/60 to-transparent" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6 sm:pb-20 sm:pt-10 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <div
               aria-hidden="true"
@@ -94,7 +94,7 @@ export default async function GalleryPage() {
             >
               Decennial Celebration of CCSRR
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-[#F6DFC4]/90 sm:text-[17px]">
+            <p className="mx-auto mt-4 text-[16px] leading-relaxed text-[#F6DFC4]/90 sm:whitespace-nowrap sm:text-[18px]">
               A decade of stroke rehabilitation, research, and service — celebrated with our community.
             </p>
             <div className="mx-auto mt-5 h-px w-32 bg-gradient-to-r from-transparent via-[#E7C77A] to-transparent" />
