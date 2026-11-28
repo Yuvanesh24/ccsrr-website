@@ -10,7 +10,7 @@ const pages = [1, 2, 3].map((page) => ({
   src: `/symposium/stroke-symposium-2026-speakers-p${page}.jpg`,
   alt: `National Stroke Symposium 2026 speakers — page ${page}`,
   width: 1241,
-  height: 1755,
+  height: page === 1 ? 2053 : 1755,
 }));
 
 export default function SymposiumSpeakers() {
