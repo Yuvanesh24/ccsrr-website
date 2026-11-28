@@ -12,6 +12,7 @@ import MemberCard from "@/components/MemberCard";
 import SymposiumBrochure from "@/components/SymposiumBrochure";
 import SymposiumSpeakers from "@/components/SymposiumSpeakers";
 import SymposiumPopBlast from "@/components/SymposiumPopBlast";
+import ChristmasSnowfall from "@/components/ChristmasSnowfall";
 
 export default async function HomePage() {
   const [{ fundedProjects, phdProjects, studentProjects }, events, members, publications] =
@@ -21,7 +22,8 @@ export default async function HomePage() {
   const upcomingEvents = events.filter((e) => e.isUpcoming).slice(0, 3);
   const featuredProjects = [...fundedProjects, ...phdProjects].slice(0, 3);
   return (
-    <>
+    <div className="christmas-home">
+      <ChristmasSnowfall />
       {/* ── ANNOUNCEMENT MARQUEE ── */}
       <a
         href="#symposium-2026-poster"
@@ -498,6 +500,6 @@ export default async function HomePage() {
         </section>
       )}
 
-    </>
+    </div>
   );
 }

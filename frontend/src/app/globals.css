@@ -215,3 +215,57 @@
     display: none;
   }
 }
+
+/* -- Christmas theme (homepage only) -- */
+.christmas-home {
+  background: #fff6f0;
+}
+.christmas-home section {
+  background-color: #fff6f0 !important;
+}
+.christmas-home section[style*="linear-gradient(135deg"] {
+  background: linear-gradient(135deg, #5a0e1c 0%, #7c1526 45%, #3a0a12 100%) !important;
+}
+.christmas-home section[style*="linear-gradient(180deg"] {
+  background: linear-gradient(180deg, #fff6f0 0%, #fbe9e2 100%) !important;
+}
+.christmas-home section.bg-white,
+.christmas-home section[style*="#ffffff"] {
+  background-color: #fffaf6 !important;
+}
+.christmas-home .marquee-bar {
+  background: linear-gradient(90deg, #4a0a14 0%, #8c1424 50%, #4a0a14 100%);
+}
+.christmas-home .hero-cta-primary {
+  background: #a5122a;
+}
+.christmas-home .hero-cta-primary:hover {
+  background: #831023;
+}
+
+.christmas-snow {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  overflow: hidden;
+}
+.christmas-snowflake {
+  position: absolute;
+  top: -10vh;
+  left: var(--left);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: #fff;
+  opacity: var(--opacity);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.85);
+  animation: christmas-snowfall var(--duration) linear var(--delay) infinite;
+}
+@keyframes christmas-snowfall {
+  from { transform: translate3d(0, -10vh, 0); }
+  to { transform: translate3d(var(--drift), 110vh, 0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .christmas-snow { display: none; }
+}
