@@ -89,16 +89,14 @@ export default async function HomePage() {
 
           <SymposiumSpeakers />
 
-          <SymposiumBrochure />
-
-          <div id="symposium-2026-poster" className="scroll-mt-24 pt-12 sm:pt-16 pb-12 sm:pb-16 text-center">
-            <div className="group relative inline-block w-full max-w-[640px]">
+          <SymposiumBrochure>
+            <div className="group relative w-full overflow-hidden rounded-xl border border-[#E8E5E0] bg-white shadow-sm">
               <Image
                 src="/symposium/stroke-symposium-2026-poster.jpeg"
                 alt="National Stroke Symposium 2026 poster"
                 width={1055}
                 height={1490}
-                className="w-full h-auto rounded-xl shadow-lg transition-shadow group-hover:shadow-2xl"
+                className="w-full h-auto transition-transform duration-300 group-hover:scale-[1.02]"
               />
 
               {/* Tap targets over the poster's QR codes / links, so each opens its own form */}
@@ -121,7 +119,9 @@ export default async function HomePage() {
                 title="Register"
               />
             </div>
+          </SymposiumBrochure>
 
+          <div id="symposium-2026-poster" className="scroll-mt-24 pb-12 sm:pb-16 text-center">
             <p className="mt-5 text-[13px] text-[#8A867E]">
               Last date for abstract submission: 26th November 2026 · Email:{" "}
               <a href="mailto:ccsrr.mchp@manipal.edu" className="text-[#B84A18] hover:underline">

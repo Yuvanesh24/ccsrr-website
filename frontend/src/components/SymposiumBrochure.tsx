@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Image from "next/image";
 
 const PDF_HREF = "/symposium/stroke-symposium-2026-brochure.pdf";
@@ -11,7 +11,7 @@ const pages = [1, 2, 3, 4].map((page) => ({
   alt: `National Stroke Symposium 2026 brochure — page ${page}`,
 }));
 
-export default function SymposiumBrochure() {
+export default function SymposiumBrochure({ children }: { children?: ReactNode }) {
   const [active, setActive] = useState<number | null>(null);
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function SymposiumBrochure() {
 
   return (
     <>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 items-start">
         {pages.map((item, index) => (
           <button
             key={item.page}
@@ -68,6 +68,7 @@ export default function SymposiumBrochure() {
             </div>
           </button>
         ))}
+        {children}
       </div>
 
       <p className="mt-5 text-center text-[13px] text-[#8A867E]">
@@ -83,14 +84,14 @@ export default function SymposiumBrochure() {
 
       {current && (
         <div
-          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-3 sm:p-6"
+          className="fixed inset-0 z-50 overflow-y-auto bg-black/90 p-3 sm:p-6"
           onClick={() => setActive(null)}
           role="dialog"
           aria-modal="true"
           aria-label={`Brochure page ${current.page} of 4`}
         >
           <div
-            className="relative flex max-h-full w-full max-w-4xl flex-col items-center"
+            className="relative mx-auto flex w-full max-w-none flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-2 flex w-full items-center justify-between">
@@ -111,7 +112,7 @@ export default function SymposiumBrochure() {
               alt={current.alt}
               width={1241}
               height={1754}
-              className="h-auto max-h-[76vh] w-auto max-w-full rounded-lg shadow-2xl"
+              className="h-auto w-full rounded-lg shadow-2xl"
               sizes="100vw"
             />
 

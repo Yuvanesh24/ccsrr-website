@@ -74,14 +74,14 @@ export default function SymposiumSpeakers() {
 
       {current && (
         <div
-          className="fixed inset-0 z-50 bg-black/85 flex items-center justify-center p-3 sm:p-6"
+          className="fixed inset-0 z-50 overflow-y-auto bg-black/90 p-3 sm:p-6"
           onClick={() => setActive(null)}
           role="dialog"
           aria-modal="true"
           aria-label={`Speakers page ${current.page} of ${pages.length}`}
         >
           <div
-            className="relative flex max-h-full w-full max-w-4xl flex-col items-center"
+            className="relative mx-auto flex w-full max-w-none flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="mb-2 flex w-full items-center justify-between">
@@ -102,7 +102,7 @@ export default function SymposiumSpeakers() {
               alt={current.alt}
               width={current.width}
               height={current.height}
-              className="h-auto max-h-[76vh] w-auto max-w-full rounded-lg shadow-2xl"
+              className="h-auto w-full rounded-lg shadow-2xl"
               sizes="100vw"
             />
 
