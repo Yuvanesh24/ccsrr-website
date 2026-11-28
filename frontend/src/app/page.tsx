@@ -28,15 +28,12 @@ export default async function HomePage() {
       <a
         href="#symposium-2026-poster"
         className="marquee-bar group relative block overflow-hidden border-b border-white/10"
-        aria-label="Early bird registrations extended till 26th November 2026 — Abstract submission dates extended till 26th November 2026"
+        aria-label="Register soon for the symposium"
       >
         <div className="marquee-track py-2.5">
           {[0, 1].map((copy) => (
             <div key={copy} className="marquee-copy flex shrink-0 items-center" aria-hidden={copy === 1}>
-              {[
-                "Early bird registrations extended till 26th November 2026",
-                "Abstract submission dates extended till 26th November 2026",
-              ].map((text) => (
+              {["Register soon for the symposium"].map((text) => (
                 <span key={text} className="flex items-center">
                   <span className="px-6 text-[13px] sm:text-sm font-semibold uppercase tracking-[0.14em] text-[#FBD9BF] whitespace-nowrap group-hover:text-white transition-colors">
                     {text}
@@ -90,7 +87,10 @@ export default async function HomePage() {
           <SymposiumSpeakers />
 
           <SymposiumBrochure>
-            <div className="group relative w-full overflow-hidden rounded-xl border border-[#E8E5E0] bg-white shadow-sm">
+            <div
+              id="symposium-2026-poster"
+              className="group relative w-full scroll-mt-24 overflow-hidden rounded-xl border border-[#E8E5E0] bg-white shadow-sm"
+            >
               <Image
                 src="/symposium/stroke-symposium-2026-poster.jpeg"
                 alt="National Stroke Symposium 2026 poster"
@@ -120,15 +120,6 @@ export default async function HomePage() {
               />
             </div>
           </SymposiumBrochure>
-
-          <div id="symposium-2026-poster" className="scroll-mt-24 pb-12 sm:pb-16 text-center">
-            <p className="mt-5 text-[13px] text-[#8A867E]">
-              Last date for abstract submission: 26th November 2026 · Email:{" "}
-              <a href="mailto:ccsrr.mchp@manipal.edu" className="text-[#B84A18] hover:underline">
-                ccsrr.mchp@manipal.edu
-              </a>
-            </p>
-          </div>
         </div>
       </section>
 
