@@ -218,20 +218,20 @@
 
 /* -- Christmas theme (homepage only) -- */
 .christmas-home {
-  background: #ffdcdc;
+  background: #e6bdc3;
 }
 .christmas-home section {
-  background-color: #ffdcdc !important;
+  background-color: #e6bdc3 !important;
 }
 .christmas-home section[style*="linear-gradient(135deg"] {
   background: linear-gradient(135deg, #5a0e1c 0%, #7c1526 45%, #3a0a12 100%) !important;
 }
 .christmas-home section[style*="linear-gradient(180deg"] {
-  background: linear-gradient(180deg, #ffdcdc 0%, #fbc6c6 100%) !important;
+  background: linear-gradient(180deg, #e6bdc3 0%, #d9a3ad 100%) !important;
 }
 .christmas-home section.bg-white,
 .christmas-home section[style*="#ffffff"] {
-  background-color: #fff1f1 !important;
+  background-color: #f7e9eb !important;
 }
 .christmas-home .marquee-bar {
   background: linear-gradient(90deg, #4a0a14 0%, #8c1424 50%, #4a0a14 100%);
